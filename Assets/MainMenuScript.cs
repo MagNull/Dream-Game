@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MainMenuScript : MonoBehaviour
 {
-
     public void MoveToAnthMenuPanel(GameObject panelToMove)
     {
         panelToMove.SetActive(true);
-        UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
+        EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
     }
 
     public void OpenSettingsScene()
