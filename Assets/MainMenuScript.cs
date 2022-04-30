@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public void StartLevels()
+
+    public void MoveToAnthMenuPanel(GameObject panelToMove)
     {
-        SceneManager.LoadScene("Levels");
-        Time.timeScale = 1;
+        panelToMove.SetActive(true);
+        UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
     }
 
     public void OpenSettingsScene()
@@ -32,5 +33,6 @@ public class MainMenuScript : MonoBehaviour
     public void LoadLevelByNumber(int levelNumber)
     {
         SceneManager.LoadScene("Level" + levelNumber);
+        Time.timeScale = 1;
     }
 }

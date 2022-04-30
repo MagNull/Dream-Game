@@ -12,22 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3fba080847d111d429a107157e8e1bf9
   - enabled: 1
-    path: Assets/Scenes/Levels.unity
-    guid: d58295cc4b8193242976134a510f0ea8
-  - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 642880432fe568a4d9b6515b17bc8ef9
-  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 241631bfda13a4648a6a1910e6de5915
-  - enabled: 1
-    path: Assets/Scenes/Authors.unity
-    guid: 2052a8657ef2a564796eab23c75b04f7
-  - enabled: 1
-    path: Assets/Scenes/AudioSettings.unity
-    guid: e831fc5450e4d9a4fa0eff7ca431fa0c
-  - enabled: 1
-    path: Assets/Scenes/VideoSettings.unity
-    guid: 3e2799e17349ff648b3621829e93b308
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dcbf83fcb301bfc45b1a76da17b06dab, type: 2}
