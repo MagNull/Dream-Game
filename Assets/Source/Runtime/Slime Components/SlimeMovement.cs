@@ -32,9 +32,9 @@ namespace Source.Slime_Components
         public void Move(Vector2 movement)
         {
             var newVelocity = _baseSpeed * movement * _getSpeedModificator.Invoke();
-            newVelocity.y = _rigidbody2D.velocity.y;
-            _rigidbody2D.velocity = newVelocity;
+            newVelocity.y = _rigidbody2D.velocity.y + movement.y;
             LookAtMovement();
+            _rigidbody2D.velocity = newVelocity;
         }
 
         public void Jump()
@@ -47,7 +47,7 @@ namespace Source.Slime_Components
         public void StartJump()
         {
             var jumpForce = Mathf.Sqrt(_baseJumpHeight * _getJumpModificator.Invoke() * -2 *
-                                         (Physics2D.gravity.y * _rigidbody2D.gravityScale));
+                                       (Physics2D.gravity.y * _rigidbody2D.gravityScale));
             _rigidbody2D.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
 
@@ -57,7 +57,8 @@ namespace Source.Slime_Components
                 return;
 
             transform.rotation =
-                Quaternion.LookRotation(Vector3.forward * Mathf.Sign(Velocity.x), transform.up);
+                Quaternion.LookRotation(Vector3.Cross(_rigidbody2D.velocity, transform.up),
+                    transform.up);
         }
     }
 }

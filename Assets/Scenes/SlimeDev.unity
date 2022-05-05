@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 281936043}
   - component: {fileID: 281936035}
   - component: {fileID: 281936034}
-  - component: {fileID: 281936042}
+  - component: {fileID: 281936044}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -371,7 +371,7 @@ MonoBehaviour:
       Data: 
   _startHealth: 1
   _inputBindings: {fileID: 1406685205}
-  _groundChecking: {fileID: 0}
+  _groundChecking: {fileID: 281936043}
 --- !u!4 &281936041
 Transform:
   m_ObjectHideFlags: 0
@@ -389,45 +389,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &281936042
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281936033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.41223097, y: -0.2761653}
-      - {x: 0.15330124, y: -0.14755133}
-      - {x: 0.0047557354, y: -0.14264488}
-      - {x: -0.14960957, y: -0.14435443}
-      - {x: -0.39985275, y: -0.27330104}
-      - {x: -0.5870388, y: -0.64460653}
-      - {x: -0.6009476, y: -0.95433867}
-      - {x: -0.534379, y: -1.0206386}
-      - {x: -0.51852626, y: -1.0622439}
-      - {x: -0.4644549, y: -1.069503}
-      - {x: 0.4774927, y: -1.0702343}
-      - {x: 0.53012085, y: -1.0199615}
-      - {x: 0.5991516, y: -0.9535041}
-      - {x: 0.6126739, y: -0.5933363}
 --- !u!114 &281936043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +406,32 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!61 &281936044
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281936033}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000011920929, y: 0.48171496}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1740606, y: 0.9171109}
+  m_EdgeRadius: 0
 --- !u!1 &1404051944
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,8 +510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404051944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3154, y: -2.5908, z: 0}
-  m_LocalScale: {x: 12.652432, y: 3.537669, z: 1}
+  m_LocalPosition: {x: -0.0912, y: -2.5908, z: 0}
+  m_LocalScale: {x: 10.462641, y: 3.537669, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -654,7 +641,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -742,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533031571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.314, z: 0}
+  m_LocalPosition: {x: 0, y: 0.159, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
