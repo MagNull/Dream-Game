@@ -48,7 +48,7 @@ namespace Source.Slime_Components
             slimeMovement.Init(GetComponent<Rigidbody2D>(), 
                 slimeStateMachine.GetSpeedModificator,
                 slimeStateMachine.GetJumpPowerModificator, _groundChecking);
-            slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth);
+            slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth, _groundChecking);
 
             _inputBindings.BindMovement(slimeMovement);
         }

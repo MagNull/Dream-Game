@@ -4,5 +4,5 @@ public interface IDamageable
 {
     public event Action<int> Damaged;
     
-    void TakeDamage(int damage);
+    void TakeDamage(int damage, object source);
 }

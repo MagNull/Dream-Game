@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASd.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASd.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimeDev.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimeDev.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/IDamageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,9 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c1930196decc4476a414324050fa38384d200/4e/aa294c18/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/27/40e28f45/Single.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,6 +91,9 @@
       <workItem from="1651651110821" duration="734000" />
       <workItem from="1651651880302" duration="14296000" />
       <workItem from="1651744091828" duration="2103000" />
+      <workItem from="1652255173059" duration="98000" />
+      <workItem from="1652255307595" duration="823000" />
+      <workItem from="1652256991094" duration="7056000" />
     </task>
     <servers />
   </component>

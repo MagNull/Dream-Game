@@ -33,16 +33,11 @@ namespace Source.Slime_Components
         {
             var newVelocity = _baseSpeed * movement * _getSpeedModificator.Invoke();
             newVelocity.y = _rigidbody2D.velocity.y + movement.y;
-            LookAtMovement();
+            //LookAtMovement();
             _rigidbody2D.velocity = newVelocity;
         }
 
-        public void Jump()
-        {
-            if (!_groundChecking.IsGrounded)
-                return;
-            Jumped?.Invoke();
-        }
+        public void Jump() => Jumped?.Invoke();
 
         public void StartJump()
         {

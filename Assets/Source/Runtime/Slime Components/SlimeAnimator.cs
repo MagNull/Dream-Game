@@ -9,15 +9,18 @@ namespace Source.Slime_Components
         private readonly int _velocityXHash = Animator.StringToHash("Velocity X");
         private readonly int _velocityYHash = Animator.StringToHash("Velocity Y");
         private readonly int _jumpHash = Animator.StringToHash("Jump");
+        private readonly int _groundedHash = Animator.StringToHash("Grounded");
         private readonly int _dieHash = Animator.StringToHash("Die");
 
         private Animator _animator;
+        private GroundChecking _groundChecking;
         private SlimeMovement _movement;
 
-        public void Init(Animator animator, SlimeMovement movement, SlimeHealth health)
+        public void Init(Animator animator, SlimeMovement movement, SlimeHealth health, GroundChecking groundChecking)
         {
             _movement = movement;
             _animator = animator;
+            _groundChecking = groundChecking;
             health.Died += OnDied;
             movement.Jumped += OnJumped;
         }
@@ -32,10 +35,11 @@ namespace Source.Slime_Components
             _animator.SetTrigger(_dieHash);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             _animator.SetFloat(_velocityXHash, Mathf.Abs(_movement.Velocity.x));
             _animator.SetFloat(_velocityYHash, _movement.Velocity.y);
+            _animator.SetBool(_groundedHash, _groundChecking.IsGrounded);
         }
     }
 }

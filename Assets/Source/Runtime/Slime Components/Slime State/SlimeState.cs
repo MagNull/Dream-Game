@@ -11,10 +11,14 @@ namespace Source.Slime_Components
         private float _speed;
         [SerializeField]
         private float _jumpHeight;
+        [SerializeField]
+        private float _weight;
 
         public float Speed => _speed;
 
         public float JumpHeight => _jumpHeight;
+
+        public float Weight => _weight;
 
         public abstract void ActivateAbility();
 
