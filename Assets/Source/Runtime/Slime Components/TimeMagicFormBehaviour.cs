@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class TimeMagicFormBehaviour : MonoBehaviour
 {
+    [SerializeField] private static float coolDawnTime = 10f;
+    [SerializeField] private static float formTime = 10f;
     private static bool _isTimeShiftActivatePrevious;
     private static bool _isInForm;
-    //private static bool 
     private static float _formTimer;
     private static float _coolDawnTimer;
     private static bool _isCoolDawn;
@@ -22,8 +23,6 @@ public class TimeMagicFormBehaviour : MonoBehaviour
 
     void Update()
     {
-        //print(_formTimer + "f");
-        //print(_coolDawnTimer + "c");
         if (_formTimer >0)
             _formTimer -= Time.deltaTime;
         if (_coolDawnTimer > 0)
@@ -48,8 +47,7 @@ public class TimeMagicFormBehaviour : MonoBehaviour
         {
             print("deactivate");
             TimeShiftConstants.UpdateAllExceptPlayer(1);
-            _coolDawnTimer = 1f;
-            //_isTimeShiftActivatePrevious = !_isTimeShiftActivatePrevious;
+            _coolDawnTimer = coolDawnTime;
             _isTimeShiftActivatePrevious = false;
             _isCoolDawn = true;
         }
@@ -57,9 +55,13 @@ public class TimeMagicFormBehaviour : MonoBehaviour
         {
             print("activate");
             TimeShiftConstants.UpdateAllExceptPlayer(0);
-            _formTimer = 1f;
+            _formTimer = formTime;
             _isInForm = true;
             _isTimeShiftActivatePrevious = true;
+        }
+        else
+        {
+            print("CoolDawn!");
         }
     }
 }
