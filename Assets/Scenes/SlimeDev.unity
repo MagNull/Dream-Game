@@ -225,6 +225,9 @@ GameObject:
   - component: {fileID: 281936035}
   - component: {fileID: 281936034}
   - component: {fileID: 281936044}
+  - component: {fileID: 281936047}
+  - component: {fileID: 281936046}
+  - component: {fileID: 281936045}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -446,6 +449,42 @@ PolygonCollider2D:
       - {x: -0.55367607, y: 0.05346048}
       - {x: 0.5585488, y: 0.05833316}
       - {x: 0.74640083, y: 0.16283458}
+--- !u!114 &281936045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281936033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f47a371bdd6634478343de2ce4ebe2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &281936046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281936033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb76a221d0b01e045b87a0fe66b8033a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &281936047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281936033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151194587b26f6e4ba05dea27f74d7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404051944
 GameObject:
   m_ObjectHideFlags: 0

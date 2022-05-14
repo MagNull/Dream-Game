@@ -19,7 +19,7 @@ namespace Source.Slime_Components
             AddState<SimpleState>();
         }
 
-        public float GetSpeedModificator() => _availableStates[_currentState].Speed;
+        public float GetSpeedModificator() => _availableStates[_currentState].Speed * TimeShiftConstants.Constants["PlayerConstant"];
 
         public float GetJumpPowerModificator() => _availableStates[_currentState].JumpHeight;
         public float GetWeight() => _availableStates[_currentState].Weight;
