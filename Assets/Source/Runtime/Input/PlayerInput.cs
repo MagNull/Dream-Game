@@ -212,6 +212,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Slime_Movement;
         public InputAction @ActivateAbility => m_Wrapper.m_Slime_ActivateAbility;
         public InputAction @ChangeState => m_Wrapper.m_Slime_ChangeState;
+        //public InputAction @TimeMagic => m_Wrapper.m_Slime_ActivateTimeAbility;
         public InputAction @Jump => m_Wrapper.m_Slime_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Slime; }
         public void Enable() { Get().Enable(); }
@@ -231,6 +232,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ChangeState.started -= m_Wrapper.m_SlimeActionsCallbackInterface.OnChangeState;
                 @ChangeState.performed -= m_Wrapper.m_SlimeActionsCallbackInterface.OnChangeState;
                 @ChangeState.canceled -= m_Wrapper.m_SlimeActionsCallbackInterface.OnChangeState;
+
                 @Jump.started -= m_Wrapper.m_SlimeActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_SlimeActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_SlimeActionsCallbackInterface.OnJump;
@@ -247,6 +249,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ChangeState.started += instance.OnChangeState;
                 @ChangeState.performed += instance.OnChangeState;
                 @ChangeState.canceled += instance.OnChangeState;
+
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;

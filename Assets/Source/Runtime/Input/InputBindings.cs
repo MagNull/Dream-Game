@@ -14,7 +14,7 @@ public class InputBindings : MonoBehaviour
 
     public void BindMovement(SlimeMovement movement)
     {
-        _movement = movement;
+        _movement = movement; ;
         _playerInput.Slime.Jump.performed += _ => _movement.Jump();
     }
 

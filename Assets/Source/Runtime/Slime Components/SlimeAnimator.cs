@@ -35,6 +35,11 @@ namespace Source.Slime_Components
             _animator.SetTrigger(_dieHash);
         }
 
+        private void OnTimeStop()
+        {
+            
+        }
+
         private void FixedUpdate()
         {
             _animator.SetFloat(_velocityXHash, Mathf.Abs(_movement.Velocity.x));
