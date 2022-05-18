@@ -7,7 +7,7 @@ namespace Source.Slime_Components
     public class SlimeMovement : MonoBehaviour
     {
         public event Action Jumped;
-        public Vector2 Velocity => _rigidbody2D.velocity;
+        public Vector2 Velocity => _rigidbody2D.velocity * new Vector2(1, _rigidbody2D.gravityScale);
 
         [SerializeField]
         private float _baseSpeed = 1;
@@ -18,22 +18,17 @@ namespace Source.Slime_Components
         private Func<float> _getSpeedModificator;
         private Func<float> _getJumpModificator;
 
-        private GroundChecking _groundChecking;
-
-        public void Init(Rigidbody2D rigidbody2D, Func<float> getSpeedModificator, Func<float> getJumpModificator,
-            GroundChecking groundChecking)
+        public void Init(Rigidbody2D rigidbody2D, Func<float> getSpeedModificator, Func<float> getJumpModificator)
         {
             _rigidbody2D = rigidbody2D;
             _getSpeedModificator = getSpeedModificator;
             _getJumpModificator = getJumpModificator;
-            _groundChecking = groundChecking;
         }
 
         public void Move(Vector2 movement)
         {
             var newVelocity = _baseSpeed * movement * _getSpeedModificator.Invoke();
             newVelocity.y = _rigidbody2D.velocity.y + movement.y;
-            //LookAtMovement();
             _rigidbody2D.velocity = newVelocity;
         }
 
@@ -41,19 +36,25 @@ namespace Source.Slime_Components
 
         public void StartJump()
         {
-            var jumpForce = Mathf.Sqrt(_baseJumpHeight * _getJumpModificator.Invoke() * -2 *
-                                       (Physics2D.gravity.y * _rigidbody2D.gravityScale));
-            _rigidbody2D.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            var jumpForce = Mathf.Sqrt(_baseJumpHeight * _getJumpModificator.Invoke() * 2 *
+                                       (Mathf.Abs(Physics.gravity.y * _rigidbody2D.gravityScale)));
+            _rigidbody2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        private void FixedUpdate()
+        {
+            LookAtMovement();
         }
 
         private void LookAtMovement()
         {
-            if (Velocity.sqrMagnitude == 0)
+            if(Velocity.sqrMagnitude == 0)
                 return;
-
+            
             transform.rotation =
                 Quaternion.LookRotation(Vector3.Cross(_rigidbody2D.velocity, transform.up),
-                    transform.up);
+                    -Physics.gravity * _rigidbody2D.gravityScale);
+            Debug.Log(-Physics.gravity.normalized * _rigidbody2D.gravityScale);
         }
     }
 }

@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASd.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASd.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimeDev.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimeDev.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/SlimeStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
@@ -94,6 +88,8 @@
       <workItem from="1652255173059" duration="98000" />
       <workItem from="1652255307595" duration="823000" />
       <workItem from="1652256991094" duration="7083000" />
+      <workItem from="1652352213483" duration="157000" />
+      <workItem from="1652369556248" duration="3297000" />
     </task>
     <servers />
   </component>
