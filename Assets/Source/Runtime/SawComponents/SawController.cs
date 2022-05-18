@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SawController : MonoBehaviour
 {
-    [SerializeField] private float movingSpeed = 1f;
-    [SerializeField] private float distance = 1f;
+    [SerializeField] private float _movingSpeed = 1f;
+    [SerializeField] private float _distance = 1f;
     private bool _isMovingRight;
     private Vector2 _nextPoint;
     private Vector2 _leftBoundPos;
@@ -11,18 +11,18 @@ public class SawController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private AudioSource _damageSound;
 
-    void Start()
+    void Awake()
     {
         _isMovingRight = true;
         _leftBoundPos = gameObject.transform.position;
-        _rightBoundPos = _leftBoundPos + Vector2.right * distance;
+        _rightBoundPos = _leftBoundPos + Vector2.right * _distance;
         _rigidbody = GetComponent<Rigidbody2D>();
         _damageSound = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
     {
-        _nextPoint = Vector2.right * movingSpeed * Time.fixedDeltaTime * TimeShiftConstants.Constants["OtherConstant"];
+        _nextPoint = Vector2.right * _movingSpeed * Time.fixedDeltaTime * TimeShiftConstants.Constants["OtherConstant"];
         if (IsOutOfBounders())
         {
             DoFlip();
@@ -48,9 +48,10 @@ public class SawController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.TryGetComponent(out IDamageable damageable))
         {
             _damageSound.Play();
+            damageable.TakeDamage(1, this);
             print("the player got was injured by a saw");
         }
     }

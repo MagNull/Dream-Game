@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Source.Slime_Components
 {
-    // [CreateAssetMenu(fileName = "Slime State", menuName = "Slime State")]
     [Serializable]
     public abstract class SlimeState
     {
@@ -13,6 +12,9 @@ namespace Source.Slime_Components
         private float _jumpHeight;
         [SerializeField]
         private float _weight;
+        
+        [SerializeField]
+        private Color _stateColor;
 
         public float Speed => _speed;
 
@@ -23,5 +25,10 @@ namespace Source.Slime_Components
         public abstract void ActivateAbility();
 
         public abstract int GetDamageModificator(object source);
+
+        public void Enter(SpriteRenderer spriteRenderer)
+        {
+            spriteRenderer.color = _stateColor;
+        }
     }
 }

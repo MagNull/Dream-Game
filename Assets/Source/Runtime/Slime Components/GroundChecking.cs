@@ -18,7 +18,7 @@ namespace Source.Slime_Components
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawSphere(_checkPoint.position, _checkRadius);
+            Gizmos.DrawWireSphere(_checkPoint.position, _checkRadius);
         }
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeMagicFormBehaviour : MonoBehaviour
@@ -12,6 +9,7 @@ public class TimeMagicFormBehaviour : MonoBehaviour
     private static float _formTimer;
     private static float _coolDawnTimer;
     private static bool _isCoolDawn;
+    
     void Start()
     {
         _isTimeShiftActivatePrevious = false;

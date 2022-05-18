@@ -20,6 +20,7 @@ namespace Source.Slime_Components
         private InputBindings _inputBindings;
         [SerializeField]
         private GroundChecking _groundChecking;
+        private SpriteRenderer _spriteRenderer;
 
         private void Start()
         {
@@ -43,7 +44,7 @@ namespace Source.Slime_Components
             var slimeHealth = GetComponent<SlimeHealth>();
             _groundChecking = GetComponent<GroundChecking>();
 
-            slimeStateMachine.Init(_slimeStates);
+            slimeStateMachine.Init(_slimeStates, GetComponentInChildren<SpriteRenderer>());
             slimeHealth.Init(_startHealth, slimeStateMachine);
             slimeMovement.Init(GetComponent<Rigidbody2D>(), 
                 slimeStateMachine.GetSpeedModificator,
@@ -51,6 +52,7 @@ namespace Source.Slime_Components
             slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth, _groundChecking);
 
             _inputBindings.BindMovement(slimeMovement);
+            _inputBindings.BindStateShifting(slimeStateMachine);
         }
     }
 }
