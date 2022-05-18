@@ -54,7 +54,6 @@ namespace Source.Slime_Components
             transform.rotation =
                 Quaternion.LookRotation(Vector3.Cross(_rigidbody2D.velocity, transform.up),
                     -Physics.gravity * _rigidbody2D.gravityScale);
-            Debug.Log(-Physics.gravity.normalized * _rigidbody2D.gravityScale);
         }
     }
 }
