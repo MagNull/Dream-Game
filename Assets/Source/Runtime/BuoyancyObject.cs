@@ -1,16 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using Source.Slime_Components;
 using UnityEngine;
 
 [RequireComponent(typeof(BuoyancyEffector2D))]
-public class Water : MonoBehaviour
+public class BuoyancyObject : SerializedMonoBehaviour
 {
     [SerializeField]
-    private float _surfaceLevelPerWeight;
-    [SerializeField]
-    private float _uppedBound;
+    private Dictionary<float, float> _levelPerWeight = new Dictionary<float, float>();
     private BuoyancyEffector2D _buoyancyEffector2D;
 
     private void Awake()
@@ -20,10 +17,9 @@ public class Water : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.TryGetComponent(out Slime stateMachine))
+        if (col.TryGetComponent(out Slime slime))
         {
-            _buoyancyEffector2D.surfaceLevel =
-                Mathf.Clamp(2 - _surfaceLevelPerWeight * stateMachine.GetWeight(), -0.5f, _uppedBound);
+            _buoyancyEffector2D.surfaceLevel = _levelPerWeight[slime.GetWeight()];
         }
     }
 }

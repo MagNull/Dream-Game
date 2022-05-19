@@ -15,14 +15,17 @@ namespace Source.Slime_Components
         private float _baseJumpHeight;
 
         private Rigidbody2D _rigidbody2D;
+        private GroundChecking _groundChecking;
         private Func<float> _getSpeedModificator;
         private Func<float> _getJumpModificator;
 
-        public void Init(Rigidbody2D rigidbody2D, Func<float> getSpeedModificator, Func<float> getJumpModificator)
+        public void Init(Rigidbody2D rigidbody2D, Func<float> getSpeedModificator, Func<float> getJumpModificator, 
+            GroundChecking groundChecking)
         {
             _rigidbody2D = rigidbody2D;
             _getSpeedModificator = getSpeedModificator;
             _getJumpModificator = getJumpModificator;
+            _groundChecking = groundChecking;
         }
 
         public void Move(Vector2 movement)
@@ -32,7 +35,12 @@ namespace Source.Slime_Components
             _rigidbody2D.velocity = newVelocity;
         }
 
-        public void Jump() => Jumped?.Invoke();
+        public void Jump()
+        {
+            if(!_groundChecking.IsGrounded)
+                return;
+            Jumped?.Invoke();
+        }
 
         public void StartJump()
         {
