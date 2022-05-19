@@ -12,7 +12,7 @@ public class DangerArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out SlimeStateMachine _))
+        if (collision.TryGetComponent(out Slime _))
         {
             _damageSound.Play();
             print("the player got into a dangerous substance");

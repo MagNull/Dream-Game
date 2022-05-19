@@ -20,7 +20,7 @@ public class Water : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.TryGetComponent(out SlimeStateMachine stateMachine))
+        if (col.TryGetComponent(out Slime stateMachine))
         {
             _buoyancyEffector2D.surfaceLevel =
                 Mathf.Clamp(2 - _surfaceLevelPerWeight * stateMachine.GetWeight(), -0.5f, _uppedBound);

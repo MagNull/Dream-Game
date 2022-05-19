@@ -18,9 +18,14 @@ public class InputBindings : MonoBehaviour
         _playerInput.Slime.Jump.performed += _ => _movement.Jump();
     }
 
-    public void BindStateShifting(SlimeStateMachine slimeStateMachine)
+    public void BindStateShifting(ISlimeStateSwitching slimeStateMachine)
     {
         _playerInput.Slime.ChangeState.performed += _ => slimeStateMachine.SwitchState();
+    }
+
+    public void BindAbilityCast(ISlimeAbilityCaster abilityCaster)
+    {
+        _playerInput.Slime.ActivateAbility.performed += _ => abilityCaster.ActivateSlimeAbility();
     }
 
     private void FixedUpdate()

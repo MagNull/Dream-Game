@@ -8,8 +8,8 @@ namespace Source.Slime_Components
     [RequireComponent(
         typeof(SlimeMovement),
         typeof(SlimeAnimator),
-        typeof(SlimeStateMachine))]
-    [RequireComponent(typeof(SlimeHealth), typeof(GroundChecking))]
+        typeof(Slime))]
+    [RequireComponent(typeof(GroundChecking))]
     public class SlimeCompositionRoot : SerializedMonoBehaviour
     {
         [SerializeField]
@@ -38,21 +38,22 @@ namespace Source.Slime_Components
 
         private void Compose()
         {
-            var slimeStateMachine = GetComponent<SlimeStateMachine>();
+            var slime = GetComponent<Slime>();
             var slimeAnimator = GetComponent<SlimeAnimator>();
             var slimeMovement = GetComponent<SlimeMovement>();
-            var slimeHealth = GetComponent<SlimeHealth>();
+            var slimeHealth = new Health(_startHealth);
             _groundChecking = GetComponent<GroundChecking>();
 
-            slimeStateMachine.Init(_slimeStates, GetComponentInChildren<SpriteRenderer>());
-            slimeHealth.Init(_startHealth, slimeStateMachine);
-            slimeMovement.Init(GetComponent<Rigidbody2D>(), 
-                slimeStateMachine.GetSpeedModificator,
-                slimeStateMachine.GetJumpPowerModificator);
+            slime.Init(_slimeStates, slimeHealth, 
+                GetComponentInChildren<SpriteRenderer>());
+            slimeMovement.Init(GetComponent<Rigidbody2D>(),
+                slime.GetSpeedModificator,
+                slime.GetJumpPowerModificator);
             slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth, _groundChecking);
 
             _inputBindings.BindMovement(slimeMovement);
-            _inputBindings.BindStateShifting(slimeStateMachine);
+            _inputBindings.BindStateShifting(slime);
+            _inputBindings.BindAbilityCast(slime);
         }
     }
 }

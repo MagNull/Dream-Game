@@ -18,7 +18,7 @@ public class SlimeStateBottle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.TryGetComponent(out SlimeStateMachine slimeStateMachine))
+        if (col.TryGetComponent(out ISlimeStateSwitching slimeStateMachine))
         {
             switch (_slimeState)
             {

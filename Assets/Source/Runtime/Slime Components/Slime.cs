@@ -5,19 +5,21 @@ using UnityEngine;
 
 namespace Source.Slime_Components
 {
-    public class SlimeStateMachine : MonoBehaviour
+    public class Slime : MonoBehaviour, ISlimeStateSwitching, ISlimeAbilityCaster, IDamageable
     {
-        public event Action<SlimeState> StateChanged;
         private List<SlimeState> _allStates;
         private List<SlimeState> _availableStates;
         private int _currentState = -1;
+        private Health _health;
         private SpriteRenderer _spriteRenderer;
 
-        public void Init(List<SlimeState> startStates, SpriteRenderer spriteRenderer)
+
+        public void Init(List<SlimeState> startStates, Health health, SpriteRenderer spriteRenderer)
         {
             _allStates = startStates;
             _availableStates = new List<SlimeState>();
             _spriteRenderer = spriteRenderer;
+            _health = health;
             AddState<SimpleState>();
         }
 
@@ -26,8 +28,8 @@ namespace Source.Slime_Components
         public float GetJumpPowerModificator() => _availableStates[_currentState].JumpHeight;
         public float GetWeight() => _availableStates[_currentState].Weight;
 
-        public int GetDamageModificator(object source) => _availableStates[_currentState].GetDamageModificator(source);
-
+        private int GetDamageModificator(object source) => _availableStates[_currentState].GetDamageModificator(source);
+        
         public void AddState<T>() where T : SlimeState
         {
             var newState = _allStates.FirstOrDefault(s => s is T);
@@ -42,17 +44,31 @@ namespace Source.Slime_Components
                 throw new Exception("Slime hasn't any states");
             _currentState++;
             _currentState %= _availableStates.Count;
-            Debug.Log(_currentState);
             _availableStates[_currentState].Enter(_spriteRenderer);
-
-            StateChanged?.Invoke(_availableStates[_currentState]);
         }
 
         public void ActivateSlimeAbility() => _availableStates[_currentState].ActivateAbility();
 
-        public void OnDied()
+        public void TakeDamage(int damage, object source)
+        {
+            var modificator = GetDamageModificator(source);
+            var resultDamage = damage * modificator;
+            _health.TakeDamage(resultDamage);
+        }
+
+        private void OnDied()
         {
             Debug.Log("Died");
+        }
+
+        private void OnEnable()
+        {
+            _health.Died += OnDied;
+        }
+
+        private void OnDisable()
+        {
+            _health.Died -= OnDied;
         }
     }
 }

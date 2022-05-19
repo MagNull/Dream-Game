@@ -16,7 +16,7 @@ namespace Source.Slime_Components
         private GroundChecking _groundChecking;
         private SlimeMovement _movement;
 
-        public void Init(Animator animator, SlimeMovement movement, SlimeHealth health, GroundChecking groundChecking)
+        public void Init(Animator animator, SlimeMovement movement, Health health, GroundChecking groundChecking)
         {
             _movement = movement;
             _animator = animator;

@@ -1979,7 +1979,7 @@ PrefabInstance:
       objectReference: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 14
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
@@ -2004,7 +2004,7 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModifications.Array.data[4]
       value: '"path":"_slimeStates.[1]","value":{"$id":0,"$type":"Source.Slime_Components.AirState,
         Assembly-CSharp","_speed":1,"_jumpHeight":3,"_weight":0.5,"_stateColor":{"$type":"UnityEngine.Color,
-        UnityEngine.CoreModule",0.6886792,0.6886792,0.6886792,1}}'
+        UnityEngine.CoreModule",1,0,0,1}}'
       objectReference: {fileID: 0}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[5]
@@ -2019,7 +2019,7 @@ PrefabInstance:
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[7]
       value: '"path":"_slimeStates.[1]._stateColor","value":{"$id":0,"$type":"UnityEngine.Color,
-        UnityEngine.CoreModule",0.6886792,0.6886792,0.6886792,1}'
+        UnityEngine.CoreModule",1,0,0,1}'
       objectReference: {fileID: 0}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[8]
@@ -2028,29 +2028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[9]
-      value: '"path":"_slimeStates.[2]","value":{"$id":0,"$type":"Source.Slime_Components.StoneState,
-        Assembly-CSharp","_speed":1,"_jumpHeight":1,"_weight":2,"_stateColor":{"$type":"UnityEngine.Color,
-        UnityEngine.CoreModule",0.5754717,0.5754717,0.5754717,1}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[10]
-      value: '"path":"_slimeStates.[2]._jumpHeight","value":{"$id":0,"$type":"System.Single,
-        mscorlib",1}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[11]
-      value: '"path":"_slimeStates.[2]._speed","value":{"$id":0,"$type":"System.Single,
-        mscorlib",1}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[12]
-      value: '"path":"_slimeStates.[2]._stateColor","value":{"$id":0,"$type":"UnityEngine.Color,
-        UnityEngine.CoreModule",0.5754717,0.5754717,0.5754717,1}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[13]
-      value: '"path":"_slimeStates.[2]._weight","value":{"$id":0,"$type":"System.Single,
-        mscorlib",2}'
+      value: '"path":"_slimeStates.[2]","value":null'
       objectReference: {fileID: 0}
     - target: {fileID: 6720847706466506168, guid: 21f67f32df533d5469e9f15df6e156b1, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
