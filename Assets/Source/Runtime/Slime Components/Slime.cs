@@ -20,6 +20,7 @@ namespace Source.Slime_Components
             _availableStates = new List<SlimeState>();
             _spriteRenderer = spriteRenderer;
             _health = health;
+            enabled = true;
             AddState<SimpleState>();
         }
 
@@ -35,15 +36,29 @@ namespace Source.Slime_Components
             var newState = _allStates.FirstOrDefault(s => s is T);
             if (!_availableStates.Contains(newState))
                 _availableStates.Add(newState);
-            SwitchState();
+            newState.Init(gameObject);
+            SwitchState<T>();
         }
 
         public void SwitchState()
         {
             if (_availableStates.Count == 0)
                 throw new Exception("Slime hasn't any states");
+            _availableStates[_currentState]?.Exit();
             _currentState++;
             _currentState %= _availableStates.Count;
+            _availableStates[_currentState].Enter(_spriteRenderer);
+        }
+
+        private void SwitchState<TState>() where TState : SlimeState
+        {
+            var stateIndex = _availableStates.FindLastIndex(s => s is TState);
+            if(stateIndex == -1)
+                return;
+            if(_currentState != -1)
+                _availableStates[_currentState].Exit();
+            
+            _currentState = stateIndex;
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 

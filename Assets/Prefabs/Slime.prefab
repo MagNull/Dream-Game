@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6720847706466506167}
   - component: {fileID: 6720847706466506166}
   - component: {fileID: 6720847706466506165}
-  - component: {fileID: 6720847706466506164}
   - component: {fileID: 6720847706466506171}
   - component: {fileID: 1295773912}
   - component: {fileID: 7491339841552672928}
@@ -104,10 +103,76 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Source.Slime_Components.SimpleState, Assembly-CSharp
+    - Name: _speed
+      Entry: 4
+      Data: 2
+    - Name: _jumpHeight
+      Entry: 4
+      Data: 2
+    - Name: _weight
+      Entry: 4
+      Data: 1
+    - Name: _stateColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Source.Slime_Components.AirState, Assembly-CSharp
+    - Name: _speed
+      Entry: 4
+      Data: 1
+    - Name: _jumpHeight
+      Entry: 4
+      Data: 3
+    - Name: _weight
+      Entry: 4
+      Data: 0.5
+    - Name: _stateColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0.698039234
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Source.Slime_Components.StoneState, Assembly-CSharp
     - Name: _speed
       Entry: 4
       Data: 1
@@ -116,7 +181,25 @@ MonoBehaviour:
       Data: 1
     - Name: _weight
       Entry: 4
+      Data: 2
+    - Name: _stateColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.490566015
+    - Name: 
+      Entry: 4
+      Data: 0.487789243
+    - Name: 
+      Entry: 4
+      Data: 0.487789243
+    - Name: 
+      Entry: 4
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -141,8 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e11468eec7444d18c7def182680895c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseSpeed: 2
-  _baseJumpHeight: 2
+  _baseSpeed: 1
+  _baseJumpHeight: 1
 --- !u!114 &6720847706466506166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,21 +245,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6720847706466506161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a02ff9acb2684a51a41b7482ccda10d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6720847706466506164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6720847706466506161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abe231cfbbfc4b13b487d403f52e15d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6720847706466506171

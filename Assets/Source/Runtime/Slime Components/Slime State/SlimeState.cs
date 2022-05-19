@@ -26,9 +26,13 @@ namespace Source.Slime_Components
 
         public abstract int GetDamageModificator(object source);
 
+        public abstract void Init(GameObject slimeGameObject);
+
         public void Enter(SpriteRenderer spriteRenderer)
         {
             spriteRenderer.color = _stateColor;
         }
+
+        public abstract void Exit();
     }
 }

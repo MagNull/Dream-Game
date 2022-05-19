@@ -13,5 +13,15 @@ namespace Source.Slime_Components
         {
             throw new System.NotImplementedException();
         }
+
+        public override void Init(GameObject slimeGameObject)
+        {
+            
+        }
+
+        public override void Exit()
+        {
+            
+        }
     }
 }

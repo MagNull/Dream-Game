@@ -1,15 +1,46 @@
-﻿namespace Source.Slime_Components
+﻿using System;
+using UnityEngine;
+
+namespace Source.Slime_Components
 {
     public class AirState : SlimeState
     {
+        [SerializeField]
+        private float _gravitationReduceCoefficient;
+        private Rigidbody2D _rigidbody2D;
+        private bool _isAbilityActive;
+
         public override void ActivateAbility()
         {
-            throw new System.NotImplementedException();
+            if (_isAbilityActive)
+            {
+                _rigidbody2D.gravityScale /= _gravitationReduceCoefficient;
+                _isAbilityActive = false;
+            }
+            else
+            {
+                _rigidbody2D.gravityScale *= _gravitationReduceCoefficient;
+                _isAbilityActive = true;
+            }
         }
 
-        public override int GetDamageModificator(object source)
+        public override int GetDamageModificator(object source) => 1;
+
+        public override void Init(GameObject slimeGameObject)
         {
-            throw new System.NotImplementedException();
+            if (slimeGameObject.TryGetComponent(out Rigidbody2D rigidbody2D))
+                _rigidbody2D = rigidbody2D;
+            else
+                throw new Exception("Incorrect Air state initialization");
+        }
+
+        public override void Exit()
+        {
+            if (_isAbilityActive)
+            {
+                _rigidbody2D.gravityScale /= _gravitationReduceCoefficient;
+                _isAbilityActive = false;
+            }
         }
     }
 }

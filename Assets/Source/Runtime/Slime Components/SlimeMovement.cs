@@ -48,12 +48,12 @@ namespace Source.Slime_Components
 
         private void LookAtMovement()
         {
-            if(Velocity.sqrMagnitude == 0)
+            if (Velocity.sqrMagnitude == 0)
                 return;
-            
+
             transform.rotation =
-                Quaternion.LookRotation(Vector3.Cross(_rigidbody2D.velocity, transform.up),
-                    -Physics.gravity * _rigidbody2D.gravityScale);
+                Quaternion.LookRotation(
+                    Vector3.Cross(_rigidbody2D.velocity, Vector3.up), Vector3.up);
         }
     }
 }
