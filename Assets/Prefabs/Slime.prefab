@@ -167,6 +167,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _gravitationReduceCoefficient
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -462,9 +465,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -429215887
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1266327188, guid: 7b37a9f4ffd88c54dbc8af074ce262bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
