@@ -1,3 +1,4 @@
+using Source.Slime_Components;
 using UnityEngine;
 
 public class SawController : MonoBehaviour
@@ -46,9 +47,9 @@ public class SawController : MonoBehaviour
                || (_isMovingRight && transform.position.x >= _rightBoundPos.x);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IDamageable damageable))
+        if (collision.TryGetComponent(out Slime damageable))
         {
             _damageSound.Play();
             damageable.TakeDamage(1, this);

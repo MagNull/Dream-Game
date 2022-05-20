@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 724942747446026108}
   - component: {fileID: 724942747446026104}
   - component: {fileID: 724942747446026107}
+  - component: {fileID: 3729866820070414299}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -46,7 +47,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.0034714937}
@@ -92,7 +93,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0eafcd1cb5d37b745a7480d5695cad6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 724942747446026109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd078ecab58a5f94fb7bc8d2fad880e8, type: 3}
+  m_Script: {fileID: 11500000, guid: fcc3d946590403e48afc97f5090eac60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 1
-  distance: 1
+  _movingSpeed: 1
+  _distance: 1
 --- !u!50 &724942747446026104
 Rigidbody2D:
   serializedVersion: 4
@@ -235,3 +236,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &3729866820070414299
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724942747446026109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.95
