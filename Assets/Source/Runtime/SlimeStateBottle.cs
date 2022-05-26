@@ -29,7 +29,7 @@ public class SlimeStateBottle : MonoBehaviour
                     slimeStateMachine.AddState<StoneState>();
                     break;
                 case SlimeState.MAGIC:
-                    slimeStateMachine.AddState<AirState>();
+                    slimeStateMachine.AddState<MagicState>();
                     break;
             }
             Destroy(gameObject);
