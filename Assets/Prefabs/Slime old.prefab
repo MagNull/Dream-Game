@@ -46,14 +46,12 @@ GameObject:
   - component: {fileID: 6720847706466506165}
   - component: {fileID: 6720847706466506171}
   - component: {fileID: 1295773912}
-  - component: {fileID: 7491339841552672928}
-  - component: {fileID: 2764657370691268514}
   - component: {fileID: 6720847706466506163}
   - component: {fileID: 6720847706466506162}
   - component: {fileID: 1834163036804823982}
   - component: {fileID: 1973944493}
   m_Layer: 0
-  m_Name: Slime
+  m_Name: Slime old
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +101,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|Source.Slime_Components.SimpleState, Assembly-CSharp
@@ -207,13 +205,49 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 4|MagicState, Assembly-CSharp
+    - Name: _speed
+      Entry: 4
+      Data: 2
+    - Name: _jumpHeight
+      Entry: 4
+      Data: 2
+    - Name: _weight
+      Entry: 4
+      Data: 1
+    - Name: _stateColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gravitationReduceCoefficient
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
   _startHealth: 1
-  _inputBindings: {fileID: 0}
+  _inputBindings: {fileID: 1482381729866226650, guid: 1239900f234853747920d97fbc1dae5c, type: 3}
   _groundChecking: {fileID: 6720847706466506171}
 --- !u!114 &6720847706466506167
 MonoBehaviour:
@@ -280,30 +314,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f47a371bdd6634478343de2ce4ebe2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7491339841552672928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6720847706466506161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb76a221d0b01e045b87a0fe66b8033a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2764657370691268514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6720847706466506161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 151194587b26f6e4ba05dea27f74d7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &6720847706466506163

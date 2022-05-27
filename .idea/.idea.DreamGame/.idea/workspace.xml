@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverOffAnim.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverOffAnim.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverOnAnim.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/LeverAnimations/LeverOnAnim.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Water.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/BuoyancyObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Water.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/BuoyancyObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Spikes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Spikes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/air_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/burron_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/burron_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/button_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/button_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/button_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/button_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/fog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/fog.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/lever1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/lever1.JPG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/lever2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/lever2.JPG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (7) 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (7) 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (8) 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (8) 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (8).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pixil-frame-0 (8).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/poison.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/poison.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/saw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/saw.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ships.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ships.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slimestanding-Sheet.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slimestanding-Sheet.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/star.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
