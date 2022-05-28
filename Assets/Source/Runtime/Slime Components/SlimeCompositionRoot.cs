@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Source.Runtime;
+using Source.Runtime.UI___HUD;
 using UnityEngine;
 
 namespace Source.Slime_Components
