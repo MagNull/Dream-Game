@@ -16,6 +16,8 @@ public class TimeShiftConstants : MonoBehaviour
         Constants["OtherConstant"] = 1;
     }
 
+    public static void SetOtherConstant(float newValue) => Constants["OtherConstant"] = newValue;
+
     public static void UpdateAllExceptPlayer(float newValue)
     {
         var constantsKeysForUpdate = new List<string>();
