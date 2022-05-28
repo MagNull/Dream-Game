@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour
 {
+    public GameObject _gameObject;
     private Animator _animations;
     private AudioSource _damageSound;
     private bool _isTurnOn;
@@ -35,6 +36,7 @@ public class LeverController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && _isNear)
         {
             print("Lever Interaction");
+            _gameObject.gameObject.SetActive(true);
             _isTurnOn = !_isTurnOn;
             _animations.SetBool(_leverOnAnim, _isTurnOn);
             _damageSound.Play();

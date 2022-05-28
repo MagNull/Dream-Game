@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MenuControls : MonoBehaviour
 {
-    private GameObject _activeWindow;
-    private GameObject _previousWindow;
+    public GameObject _activeWindow;
+    public GameObject _previousWindow;
 
     public void ChangeWindow(GameObject window)
     {
