@@ -1,4 +1,5 @@
 using System;
+using Source.Runtime;
 using Source.Slime_Components;
 using UnityEngine;
 
@@ -26,6 +27,11 @@ public class InputBindings : MonoBehaviour
     public void BindAbilityCast(ISlimeAbilityCaster abilityCaster)
     {
         _playerInput.Slime.ActivateAbility.performed += _ => abilityCaster.ActivateSlimeAbility();
+    }
+
+    public void BindPause(Pause pause)
+    {
+        _playerInput.UI.Pause.performed += _ => pause.ChangePauseState();
     }
 
     private void FixedUpdate()

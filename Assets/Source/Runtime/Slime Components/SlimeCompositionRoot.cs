@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Source.Runtime;
 using UnityEngine;
 
 namespace Source.Slime_Components
@@ -53,6 +54,7 @@ namespace Source.Slime_Components
             _inputBindings.BindMovement(slimeMovement);
             _inputBindings.BindStateShifting(slime);
             _inputBindings.BindAbilityCast(slime);
+            _inputBindings.BindPause(FindObjectOfType<Pause>());
         }
     }
 }
