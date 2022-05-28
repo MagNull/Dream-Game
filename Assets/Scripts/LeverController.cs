@@ -36,7 +36,7 @@ public class LeverController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && _isNear)
         {
             print("Lever Interaction");
-            _gameObject.gameObject.SetActive(true);
+            _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
             _isTurnOn = !_isTurnOn;
             _animations.SetBool(_leverOnAnim, _isTurnOn);
             _damageSound.Play();
