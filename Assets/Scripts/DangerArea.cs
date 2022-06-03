@@ -14,8 +14,8 @@ public class DangerArea : MonoBehaviour
     {
         if (collision.TryGetComponent(out Slime slime))
         {
-            //if (slime.GetCurrentState() == )
-            _damageSound.Play();
+            print("Damage");
+            //_damageSound.Play();
             slime.TakeDamage(1, this);
             print("the player got into a dangerous substance");
         }
