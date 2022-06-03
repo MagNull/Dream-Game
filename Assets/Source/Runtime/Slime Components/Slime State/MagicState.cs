@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagicState : SlimeState
 {
     private bool _isAbilityActive;
+
     public override void ActivateAbility()
     {
         TimeShiftConstants.SetOtherConstant(_isAbilityActive ? 1 : 0);

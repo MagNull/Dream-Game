@@ -30,6 +30,7 @@ public class SawController : MonoBehaviour
         }
         _nextPoint.x *= (_isMovingRight) ? 1 : -1;
         _rigidbody.MovePosition((Vector2)transform.position + _nextPoint);
+        transform.Rotate(Vector3.forward, 5 * TimeShiftConstants.Constants["OtherConstant"]);
         _rigidbody.gravityScale = 0;
     }
 
