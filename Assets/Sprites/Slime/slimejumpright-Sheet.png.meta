@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30291798a138f9349895047190e8e110
+guid: 87c1bf0071c97334b9b29bc5f8e37220
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,19 +131,40 @@ TextureImporter:
       name: slimejumpright-Sheet_0
       rect:
         serializedVersion: 2
-        x: 416
-        y: 59
-        width: 23
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 417
+        y: 66
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f175ebc3a7e53f479b918f67cda8c6f
-      internalID: -604929126
+      spriteID: d7926523763c115469afb6333aa5d047
+      internalID: 1442015699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimejumpright-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 70
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5274b99d5e35aab478e7199cad60e492
+      internalID: 225825485
       vertices: []
       indices: 
       edges: []
@@ -152,19 +173,19 @@ TextureImporter:
       name: slimejumpright-Sheet_2
       rect:
         serializedVersion: 2
-        x: 477
-        y: 70
-        width: 31
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 480
+        y: 82
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0664a21a4193494dbbe9552be778f34
-      internalID: 1446328790
+      spriteID: b4592e0ce066cdd40b2da1ab3b640c3d
+      internalID: -1352212374
       vertices: []
       indices: 
       edges: []
@@ -177,15 +198,15 @@ TextureImporter:
         y: 81
         width: 21
         height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4653a117df87db4798b99eddb328527
-      internalID: -815350902
+      spriteID: aa4631ac72bb97846a1c7199f017a2a5
+      internalID: 1100560436
       vertices: []
       indices: 
       edges: []
@@ -198,15 +219,36 @@ TextureImporter:
         y: 69
         width: 20
         height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8128165b55686594e8afbac2cf59daac
-      internalID: 1397268647
+      spriteID: 766b2e3744980754399a1d21e947b193
+      internalID: -608764418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimejumpright-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd21baae7ea32945bd9c673ae8da381
+      internalID: -1700739512
       vertices: []
       indices: 
       edges: []
@@ -219,15 +261,15 @@ TextureImporter:
         y: 51
         width: 31
         height: 20
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa81b09a80506104597629cbb6568a25
-      internalID: 446971424
+      spriteID: 672995b8582d41a4e928710a6aaf6279
+      internalID: -2085892213
       vertices: []
       indices: 
       edges: []
@@ -240,15 +282,36 @@ TextureImporter:
         y: 24
         width: 23
         height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efdf257021a213940ada40ba4e3a6579
-      internalID: -901787376
+      spriteID: 08e6c86f4b664b347b015cd00c97be3a
+      internalID: 277364407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimejumpright-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 42
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6c7818a5b8fd445b5362dd0d6b0602
+      internalID: -920230718
       vertices: []
       indices: 
       edges: []
@@ -261,15 +324,15 @@ TextureImporter:
         y: 7
         width: 23
         height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f301ef03549f3ad40bec0834f57339f0
-      internalID: -977462999
+      spriteID: 5d3b12677b4fd43419230e813adebdd9
+      internalID: -2052845296
       vertices: []
       indices: 
       edges: []
@@ -278,19 +341,19 @@ TextureImporter:
       name: slimejumpright-Sheet_10
       rect:
         serializedVersion: 2
-        x: 795
+        x: 799
         y: 18
-        width: 24
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 509fee4941b0a05489083272c1f79ff7
-      internalID: -321304663
+      spriteID: 92c83f9457fb5df4cb633cf5091694b4
+      internalID: -1537688644
       vertices: []
       indices: 
       edges: []
@@ -303,15 +366,15 @@ TextureImporter:
         y: 0
         width: 24
         height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04dcfe5f5f0bf9c48ab735aa57b5330f
-      internalID: -1515199824
+      spriteID: bf75f1b6d7cef444aa59f8692e49cd98
+      internalID: -1236821038
       vertices: []
       indices: 
       edges: []
@@ -331,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55bead563fd3fe4299a6ddc0526ec26
-      internalID: 1143246174
+      spriteID: fb3e4afd1112d114ea012cdb3b724400
+      internalID: 580056759
       vertices: []
       indices: 
       edges: []
@@ -352,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431cc312795a4b241b924d9fe740c22d
-      internalID: 2123674384
+      spriteID: 3377ae22f21228e4cbaee68d4c58010f
+      internalID: -1058272304
       vertices: []
       indices: 
       edges: []
@@ -373,8 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 121d768531a70aa46941445fe438774a
-      internalID: 1326329278
+      spriteID: 513e16ad4e673b24194a3b6b63cac61d
+      internalID: -318409386
       vertices: []
       indices: 
       edges: []
@@ -387,15 +450,15 @@ TextureImporter:
         y: 0
         width: 33
         height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc2371a89403886499d2af2906ff80ac
-      internalID: -2056549499
+      spriteID: fcb61c59b50ae164a85d786c583d95a5
+      internalID: -772115505
       vertices: []
       indices: 
       edges: []
@@ -415,8 +478,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d833073e7b796804d82c398d41186b96
-      internalID: -1305242085
+      spriteID: 6e939d2b25deeef409cff2440a504022
+      internalID: 1103886604
       vertices: []
       indices: 
       edges: []
@@ -436,8 +499,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 070d9bd9ca3a78642bc94631d1ad6cac
-      internalID: 1155496795
+      spriteID: 104b37723f915874a902fff10a2b0a4b
+      internalID: -1574200468
       vertices: []
       indices: 
       edges: []
@@ -457,8 +520,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30958b2c73c8a4248a8139bceaaa0682
-      internalID: 556593718
+      spriteID: 1614f1981a84b264492430d69285a4cc
+      internalID: -1452928255
       vertices: []
       indices: 
       edges: []
@@ -474,25 +537,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slimejumpright-Sheet_14: 1326329278
-      slimejumpright-Sheet_10: -321304663
-      slimejumpright-Sheet_3: -815350902
-      slimejumpright-Sheet_9: -977462999
-      slimejumpright-Sheet_2: 1446328790
-      slimejumpright-Sheet_4: 1397268647
-      slimejumpright-Sheet_16: -1305242085
-      slimejumpright-Sheet_0: -604929126
-      slimejumpright-Sheet_6: 446971424
-      slimejumpright-Sheet_5: -488826484
-      slimejumpright-Sheet_15: -2056549499
-      slimejumpright-Sheet_13: 2123674384
-      slimejumpright-Sheet_7: -901787376
-      slimejumpright-Sheet_12: 1143246174
-      slimejumpright-Sheet_17: 1155496795
-      slimejumpright-Sheet_18: 556593718
-      slimejumpright-Sheet_11: -1515199824
-      slimejumpright-Sheet_1: 295716324
-      slimejumpright-Sheet_8: 1806039477
+      slimejumpright-Sheet_14: -318409386
+      slimejumpright-Sheet_10: -1537688644
+      slimejumpright-Sheet_3: 1100560436
+      slimejumpright-Sheet_9: -2052845296
+      slimejumpright-Sheet_2: -1352212374
+      slimejumpright-Sheet_4: -608764418
+      slimejumpright-Sheet_16: 1103886604
+      slimejumpright-Sheet_0: 1442015699
+      slimejumpright-Sheet_6: -2085892213
+      slimejumpright-Sheet_5: -1700739512
+      slimejumpright-Sheet_15: -772115505
+      slimejumpright-Sheet_13: -1058272304
+      slimejumpright-Sheet_7: 277364407
+      slimejumpright-Sheet_12: 580056759
+      slimejumpright-Sheet_17: -1574200468
+      slimejumpright-Sheet_18: -1452928255
+      slimejumpright-Sheet_11: -1236821038
+      slimejumpright-Sheet_1: 225825485
+      slimejumpright-Sheet_8: -920230718
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -28,7 +28,6 @@ namespace Source.Slime_Components
         {
             DestroyCopies();
             Compose();
-            DontDestroyOnLoad(gameObject);
         }
 
         private void DestroyCopies()
@@ -55,7 +54,6 @@ namespace Source.Slime_Components
             _inputBindings.BindMovement(slimeMovement);
             _inputBindings.BindStateShifting(slime);
             _inputBindings.BindAbilityCast(slime);
-            _inputBindings.BindPause(FindObjectOfType<Pause>());
         }
     }
 }
