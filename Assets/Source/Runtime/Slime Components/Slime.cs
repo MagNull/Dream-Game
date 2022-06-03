@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem.XR.Haptics;
+using UnityEngine.SceneManagement;
 
 namespace Source.Slime_Components
 {
@@ -74,7 +75,7 @@ namespace Source.Slime_Components
 
         public void OnDied()
         {
-            Debug.Log("Died");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void OnEnable()
