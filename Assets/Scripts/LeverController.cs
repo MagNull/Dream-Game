@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour
 {
-    //public GameObject _gameObject;
+    public GameObject _gameObject;
     private Animator _animations;
     private AudioSource _damageSound;
     private bool _isTurnOn;
@@ -41,6 +41,7 @@ public class LeverController : MonoBehaviour
             else
                 _animations.Play("LeverOffAnim");
             _damageSound.Play();
+            _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
         }
     }
 }
