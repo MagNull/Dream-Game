@@ -9,6 +9,7 @@ public class MenuControls : MonoBehaviour
 
     public void ChangeWindow(GameObject window)
     {
+        Time.timeScale = 1;
         _previousWindow = _activeWindow;
         _activeWindow = window;
         

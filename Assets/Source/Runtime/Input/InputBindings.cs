@@ -33,6 +33,7 @@ public class InputBindings : MonoBehaviour
     public void BindPause(Pause pause)
     {
         _playerInput.UI.Pause.performed += _ => pause.ChangePauseState();
+        pause.gameObject.SetActive(false);
     }
 
     private void FixedUpdate()

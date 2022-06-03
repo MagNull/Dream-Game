@@ -40,10 +40,14 @@ namespace Source.Slime_Components
             
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             _animator.SetFloat(_velocityXHash, Mathf.Abs(_movement.Velocity.x));
-            _animator.SetFloat(_velocityYHash, _movement.Velocity.y);
+            _animator.SetFloat(_velocityYHash, (float)Math.Round(_movement.Velocity.y, 2));
+        }
+
+        private void FixedUpdate()
+        {
             _animator.SetBool(_groundedHash, _groundChecking.IsGrounded);
         }
     }
