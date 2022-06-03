@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem.XR.Haptics;
 
 namespace Source.Slime_Components
 {
@@ -12,7 +13,6 @@ namespace Source.Slime_Components
         private int _currentState = -1;
         private Health _health;
         private SpriteRenderer _spriteRenderer;
-
 
         public void Init(List<SlimeState> startStates, Health health, SpriteRenderer spriteRenderer)
         {
@@ -47,6 +47,7 @@ namespace Source.Slime_Components
             _availableStates[_currentState]?.Exit();
             _currentState++;
             _currentState %= _availableStates.Count;
+            print(_currentState);
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -71,7 +72,7 @@ namespace Source.Slime_Components
             _health.TakeDamage(resultDamage);
         }
 
-        private void OnDied()
+        public void OnDied()
         {
             Debug.Log("Died");
         }

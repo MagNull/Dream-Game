@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour
 {
-    public GameObject _gameObject;
+    //public GameObject _gameObject;
     private Animator _animations;
     private AudioSource _damageSound;
     private bool _isTurnOn;
     private bool _isNear;
-    private static readonly int _leverOnAnim = Animator.StringToHash("LeverInteraction");
+    private static readonly int _leverInteraction = Animator.StringToHash("LeverInteraction");
 
     void Awake()
     {
         _animations = GetComponent<Animator>();
-        _animations.SetBool(_leverOnAnim, false);
+        _animations.SetBool(_leverInteraction, false);
         _damageSound = GetComponent<AudioSource>();
         _isTurnOn = false;
         _isNear = false;
@@ -35,10 +35,11 @@ public class LeverController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && _isNear)
         {
-            print("Lever Interaction");
-            _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
             _isTurnOn = !_isTurnOn;
-            _animations.SetBool(_leverOnAnim, _isTurnOn);
+            if (_isTurnOn)
+                _animations.Play("LeverOnAnim");
+            else
+                _animations.Play("LeverOffAnim");
             _damageSound.Play();
         }
     }

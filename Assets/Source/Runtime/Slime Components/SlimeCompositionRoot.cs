@@ -42,7 +42,7 @@ namespace Source.Slime_Components
             var slime = GetComponent<Slime>();
             var slimeAnimator = GetComponent<SlimeAnimator>();
             var slimeMovement = GetComponent<SlimeMovement>();
-            var slimeHealth = new Health(_startHealth);
+            var slimeHealth = new Health(_startHealth, new Action(() =>slime.OnDied()));
             _groundChecking = GetComponent<GroundChecking>();
 
             slime.Init(_slimeStates, slimeHealth, 
