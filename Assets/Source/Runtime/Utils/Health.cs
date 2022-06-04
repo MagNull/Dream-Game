@@ -7,9 +7,8 @@ namespace Source.Slime_Components
         public event Action Died;
         private int _value;
         
-        public Health(int value, Action act)
+        public Health(int value)
         {
-            Died = act;
             _value = value;
         }
 
