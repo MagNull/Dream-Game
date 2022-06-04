@@ -11,7 +11,7 @@ namespace Source.Slime_Components
             
         }
 
-        public override int GetDamageModificator(object source) => source.GetType().Equals(typeof(SpikeDamager)) ? 0 : 1;
+        public override int GetDamageModificator(object source) => 0;
 
         public override void Init(GameObject slimeGameObject) { }
 
