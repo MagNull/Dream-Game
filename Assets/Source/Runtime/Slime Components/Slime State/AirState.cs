@@ -10,6 +10,9 @@ namespace Source.Slime_Components
         private Rigidbody2D _rigidbody2D;
         private bool _isAbilityActive;
 
+        public override string Name
+        { get => "AirState"; }
+
         public override void ActivateAbility()
         {
             if (_isAbilityActive)

@@ -22,6 +22,8 @@ namespace Source.Slime_Components
 
         public float Weight => _weight;
 
+        public abstract string Name { get;}
+
         public abstract void ActivateAbility();
 
         public abstract int GetDamageModificator(object source);

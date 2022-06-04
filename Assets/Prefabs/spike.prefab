@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1755068011722421214}
   - component: {fileID: 1755068011722421213}
-  - component: {fileID: 5127558459248729469}
   - component: {fileID: 5169996847886374558}
   - component: {fileID: 2417906350843369104}
+  - component: {fileID: 4795829699142395428}
   m_Layer: 6
   m_Name: spike
   m_TagString: Ground
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5127558459248729469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755068011722421212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9121a26005efc46897f9508bbbb732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5169996847886374558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,3 +139,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8093841}
   m_EdgeRadius: 0
+--- !u!114 &4795829699142395428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755068011722421212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229f88a9bab52c64ab0e1753116db907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
