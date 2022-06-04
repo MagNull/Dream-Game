@@ -48,7 +48,6 @@ namespace Source.Slime_Components
             _availableStates[_currentState]?.Exit();
             _currentState++;
             _currentState %= _availableStates.Count;
-            print(_currentState);
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -71,6 +70,12 @@ namespace Source.Slime_Components
             var modificator = GetDamageModificator(source);
             var resultDamage = damage * modificator;
             _health.TakeDamage(resultDamage);
+        }
+
+        private void FixedUpdate()
+        {
+            if (_availableStates[_currentState].Name == "MagicState")
+                MagicState.Update();
         }
 
         public void OnDied()
