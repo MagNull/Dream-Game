@@ -4,6 +4,9 @@ namespace Source.Slime_Components
 {
     public class SimpleState : SlimeState
     {
+        public override string Name
+        { get => "SimpleState"; }
+
         public override void ActivateAbility()
         {
             

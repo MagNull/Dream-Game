@@ -7,6 +7,8 @@ public class MagicState : SlimeState
 {
     private bool _isAbilityActive = false;
     //private TimerManyTicks CoolDawnTimer;
+    public override string Name
+    { get => "MagicState"; }
 
     public override void ActivateAbility()
     {
