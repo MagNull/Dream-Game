@@ -21,6 +21,7 @@ namespace Source.Slime_Components
             _availableStates = new List<SlimeState>();
             _spriteRenderer = spriteRenderer;
             _health = health;
+            _health.Died += OnDied;
             enabled = true;
             AddState<SimpleState>();
         }
