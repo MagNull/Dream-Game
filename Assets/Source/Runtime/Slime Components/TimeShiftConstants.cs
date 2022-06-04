@@ -7,9 +7,9 @@ using UnityEngine;
 
 public class TimeShiftConstants : MonoBehaviour
 {
-    public static Dictionary<string, float> Constants;
+    public static Dictionary<string, float> Constants = new Dictionary<string, float>();
 
-    void Start()
+    private void Awake()
     {
         Constants = new Dictionary<string, float>();
         Constants["PlayerConstant"] = 1;

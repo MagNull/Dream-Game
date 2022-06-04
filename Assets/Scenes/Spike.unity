@@ -252,6 +252,84 @@ PrefabInstance:
     - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
       propertyPath: serializationData.Prefab
       value: 
+      objectReference: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"_startStates","value":{"$id":0,"$type":"System.Collections.Generic.List`1[[Source.Slime_Components.SlimeState,
+        Assembly-CSharp]], mscorlib","$rlength":2,"$rcontent":[{"$id":1,"$type":"MagicState,
+        Assembly-CSharp","_speed":4,"_jumpHeight":2,"_weight":1,"_stateColor":{"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",1,0,0.953536034,0},"_activateStateDuration":2,"_cooldownDuration":1},{"$id":2,"$type":"Source.Slime_Components.SimpleState,
+        Assembly-CSharp","_speed":4,"_jumpHeight":2,"_weight":1,"_stateColor":{"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",0.140434027,1,0,0}}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"_startStates.[0]","value":{"$id":0,"$type":"MagicState, Assembly-CSharp","_speed":4,"_jumpHeight":2,"_weight":1,"_stateColor":{"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",1,0,0.953536034,0},"_activateStateDuration":2,"_cooldownDuration":1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"_startStates.[0]._activateStateDuration","value":{"$id":0,"$type":"System.Single,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"_startStates.[0]._cooldownDuration","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      value: '"path":"_startStates.[0]._jumpHeight","value":{"$id":0,"$type":"System.Single,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"_startStates.[0]._speed","value":{"$id":0,"$type":"System.Single,
+        mscorlib",4}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      value: '"path":"_startStates.[0]._stateColor","value":{"$id":0,"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",1,0,0.953536034,0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      value: '"path":"_startStates.[0]._weight","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[8]
+      value: '"path":"_startStates.[1]","value":{"$id":0,"$type":"Source.Slime_Components.SimpleState,
+        Assembly-CSharp","_speed":4,"_jumpHeight":2,"_weight":1,"_stateColor":{"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",0.140434027,1,0,0}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[9]
+      value: '"path":"_startStates.[1]._jumpHeight","value":{"$id":0,"$type":"System.Single,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[10]
+      value: '"path":"_startStates.[1]._speed","value":{"$id":0,"$type":"System.Single,
+        mscorlib",4}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[11]
+      value: '"path":"_startStates.[1]._stateColor","value":{"$id":0,"$type":"UnityEngine.Color,
+        UnityEngine.CoreModule",0.140434027,1,0,0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[12]
+      value: '"path":"_startStates.[1]._weight","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4948835294451659979, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
       propertyPath: m_RootOrder
@@ -310,6 +388,7 @@ GameObject:
   - component: {fileID: 1146590972}
   - component: {fileID: 1146590971}
   - component: {fileID: 1146590970}
+  - component: {fileID: 1146590973}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -383,6 +462,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146590973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146590969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1378649604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4948835294451659971, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
@@ -407,6 +519,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1480446206740375300, guid: 693ece7b6b85afe4dac92f4b1ac90d4f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1480446206740375301, guid: 693ece7b6b85afe4dac92f4b1ac90d4f, type: 3}
       propertyPath: m_Name
       value: move spike
@@ -454,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 1480446206740375303, guid: 693ece7b6b85afe4dac92f4b1ac90d4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269325214754144840, guid: 693ece7b6b85afe4dac92f4b1ac90d4f, type: 3}
+      propertyPath: _duration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693ece7b6b85afe4dac92f4b1ac90d4f, type: 3}

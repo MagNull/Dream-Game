@@ -19,6 +19,8 @@ namespace Source.Slime_Components
         [SerializeField]
         private List<SlimeState> _slimeStates;
         [SerializeField]
+        private List<SlimeState> _startStates;
+        [SerializeField]
         private InputBindings _inputBindings;
         [SerializeField]
         private GroundChecking _groundChecking;
@@ -45,7 +47,7 @@ namespace Source.Slime_Components
             var slimeHealth = new Health(_startHealth);
             _groundChecking = GetComponent<GroundChecking>();
 
-            slime.Init(_slimeStates, slimeHealth, 
+            slime.Init(_slimeStates, _startStates, slimeHealth, 
                 GetComponentInChildren<SpriteRenderer>());
             slimeMovement.Init(GetComponent<Rigidbody2D>(),
                 slime.GetSpeedModificator, slime.GetJumpPowerModificator, _groundChecking);

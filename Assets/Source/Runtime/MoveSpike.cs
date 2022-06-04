@@ -20,9 +20,12 @@ public class MoveSpike : MonoBehaviour
         var zeroPos = transform.position;
         while (true)
         {
-            transform.DOMove(zeroPos - Vector3.up * transform.localScale.y, _moveDuration);
+            var move = 
+                transform.DOMove(zeroPos - Vector3.up * transform.localScale.y, _moveDuration);
+            move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
             yield return new WaitForSeconds(_duration);
-            transform.DOMove(zeroPos, _moveDuration);
+            move = transform.DOMove(zeroPos, _moveDuration);
+            move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
             yield return new WaitForSeconds(_duration);
         }
     }

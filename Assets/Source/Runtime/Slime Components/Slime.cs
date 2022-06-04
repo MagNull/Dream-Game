@@ -11,19 +11,23 @@ namespace Source.Slime_Components
     {
         private List<SlimeState> _allStates;
         private List<SlimeState> _availableStates;
-        private int _currentState = -1;
+        private int _currentState;
         private Health _health;
         private SpriteRenderer _spriteRenderer;
 
-        public void Init(List<SlimeState> startStates, Health health, SpriteRenderer spriteRenderer)
+        public void Init(List<SlimeState> allStates, List<SlimeState> startStates, Health health, SpriteRenderer spriteRenderer)
         {
-            _allStates = startStates;
+            _allStates = allStates;
             _availableStates = new List<SlimeState>();
+            foreach (var startState in startStates)
+            {
+                AddState(startState.GetType());
+            }
             _spriteRenderer = spriteRenderer;
             _health = health;
             _health.Died += OnDied;
+            SwitchState();
             enabled = true;
-            AddState<SimpleState>();
         }
 
         public float GetSpeedModificator() => _availableStates[_currentState].Speed * TimeShiftConstants.Constants["PlayerConstant"];
@@ -40,6 +44,14 @@ namespace Source.Slime_Components
                 _availableStates.Add(newState);
             newState.Init(gameObject);
             SwitchState<T>();
+        }
+        
+        public void AddState(Type stateType) 
+        {
+            var newState = _allStates.FirstOrDefault(s => s.GetType() == stateType);
+            if (!_availableStates.Contains(newState))
+                _availableStates.Add(newState);
+            newState.Init(gameObject);
         }
 
         public void SwitchState()
