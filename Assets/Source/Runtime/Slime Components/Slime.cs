@@ -30,6 +30,8 @@ namespace Source.Slime_Components
             enabled = true;
         }
 
+        public SlimeState GetCurrentSlimeState() => _availableStates[_currentState];
+
         public float GetSpeedModificator() => _availableStates[_currentState].Speed * TimeShiftConstants.Constants["PlayerConstant"];
 
         public float GetJumpPowerModificator() => _availableStates[_currentState].JumpHeight;
