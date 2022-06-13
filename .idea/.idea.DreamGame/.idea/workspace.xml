@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoveSpike.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/MoveSpike.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoveSpike.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/MoveSpike.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Spike.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Spike.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/BreakWallAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/BreakWallAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +97,7 @@
       <workItem from="1654248221581" duration="3348000" />
       <workItem from="1654328152642" duration="1400000" />
       <workItem from="1654337334445" duration="1896000" />
+      <workItem from="1655126473314" duration="872000" />
     </task>
     <servers />
   </component>

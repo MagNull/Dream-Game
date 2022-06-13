@@ -11,7 +11,7 @@ namespace Source.Slime_Components
     {
         private List<SlimeState> _allStates;
         private List<SlimeState> _availableStates;
-        private int _currentState;
+        private int _currentState = -1;
         private Health _health;
         private SpriteRenderer _spriteRenderer;
 
@@ -60,8 +60,10 @@ namespace Source.Slime_Components
         {
             if (_availableStates.Count == 0)
                 throw new Exception("Slime hasn't any states");
-            _availableStates[_currentState]?.Exit();
+            if(_currentState != -1)
+                _availableStates[_currentState]?.Exit();
             _currentState++;
+            Debug.Log(_currentState);
             _currentState %= _availableStates.Count;
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
