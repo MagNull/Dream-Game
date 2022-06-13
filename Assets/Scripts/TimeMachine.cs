@@ -11,12 +11,9 @@ public class TimeMachine : MonoBehaviour
     private AudioSource _damageSound;
     private bool _isTurnOn;
     private bool _isNear;
-    private static readonly int _leverInteraction = Animator.StringToHash("LeverInteraction");
 
     void Awake()
     {
-        _animations = GetComponent<Animator>();
-        _animations.SetBool(_leverInteraction, false);
         _damageSound = GetComponent<AudioSource>();
         _isTurnOn = false;
         _isNear = false;
@@ -39,10 +36,6 @@ public class TimeMachine : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && _isNear)
         {
             _isTurnOn = !_isTurnOn;
-            if (_isTurnOn)
-                _animations.Play("LeverOnAnim");
-            else
-                _animations.Play("LeverOffAnim");
             _damageSound.Play();
             _gameObject_Past.gameObject.SetActive(!_gameObject_Past.activeSelf);
             _gameObject_Present.gameObject.SetActive(!_gameObject_Present.activeSelf);
