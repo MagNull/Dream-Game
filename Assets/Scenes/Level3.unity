@@ -352,7 +352,7 @@ Transform:
   m_Children:
   - {fileID: 1388747520}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86175863
 GameObject:
@@ -567,6 +567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530746423637058235, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
+      propertyPath: slime_object
+      value: 
+      objectReference: {fileID: 1867010446051827274}
     - target: {fileID: 4858403763101825111, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
       propertyPath: m_Name
       value: BreakingBlock (2)
@@ -853,6 +857,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530746423637058235, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
+      propertyPath: slime_object
+      value: 
+      objectReference: {fileID: 1867010446051827274}
     - target: {fileID: 4858403763101825111, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
       propertyPath: m_Name
       value: BreakingBlock
@@ -1048,7 +1056,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1129,7 +1137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6525321, y: 16.9066, z: -10}
+  m_LocalPosition: {x: -1.6468501, y: 16.906738, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3042,7 +3050,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769607, y: 1}
+    m_SensorSize: {x: 1.7780981, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5555,6 +5563,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530746423637058235, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
+      propertyPath: slime_object
+      value: 
+      objectReference: {fileID: 1867010446051827274}
     - target: {fileID: 4858403763101825111, guid: f9902d46292bf8847a191d053d70c85d, type: 3}
       propertyPath: m_Name
       value: BreakingBlock (1)
@@ -27202,6 +27214,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+--- !u!114 &1867010446051827274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4948835294451659975, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+  m_PrefabInstance: {fileID: 1867010446051827273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02ff9acb2684a51a41b7482ccda10d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3833495286609656381
 PrefabInstance:
   m_ObjectHideFlags: 0

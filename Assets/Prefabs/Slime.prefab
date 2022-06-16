@@ -332,6 +332,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _startStates
+      Entry: 6
+      Data: 
   _startHealth: 1
   _inputBindings: {fileID: 0}
   _groundChecking: {fileID: 4948835294451659977}
