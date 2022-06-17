@@ -1,30 +1,34 @@
-﻿using Source.Slime_Components;
+﻿using System;
+using Source.Slime_Components;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Buttin : MonoBehaviour
 {
     public GameObject _gameObject;
     public Slime slime_object;
     private bool _isTurnOn;
     private bool _isNear;
+    private AudioSource _audioSource;
 
     void Awake()
     {
         _isTurnOn = false;
         _isNear = false;
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.TryGetComponent(out Slime slime))
+        if (collision.gameObject.TryGetComponent(out Slime slime))
         {
             _isNear = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.TryGetComponent(out Slime slime))
+        if (col.gameObject.TryGetComponent(out Slime slime))
         {
             _isNear = false;
         }
@@ -36,6 +40,7 @@ public class Buttin : MonoBehaviour
         if (_isNear && !_isTurnOn && weight > 1)
         {
             _isTurnOn = !_isTurnOn;
+            _audioSource.Play();
             _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
         }
     }

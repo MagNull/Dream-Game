@@ -13,6 +13,7 @@ namespace Source.Slime_Components
         private float _baseSpeed = 1;
         [SerializeField]
         private float _baseJumpHeight;
+        private SpriteRenderer _spriteRenderer;
 
         private Rigidbody2D _rigidbody2D;
         private GroundChecking _groundChecking;
@@ -26,6 +27,7 @@ namespace Source.Slime_Components
             _getSpeedModificator = getSpeedModificator;
             _getJumpModificator = getJumpModificator;
             _groundChecking = groundChecking;
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
         public void Move(Vector2 movement)
@@ -59,9 +61,9 @@ namespace Source.Slime_Components
             if (Velocity.sqrMagnitude == 0)
                 return;
 
-            transform.rotation =
-                Quaternion.LookRotation(
-                    Vector3.Cross(_rigidbody2D.velocity, Vector3.up), Vector3.up);
+            var directionVector = Vector3.Cross(_rigidbody2D.velocity, Vector3.up);
+            if(directionVector != Vector3.zero)
+                _spriteRenderer.flipX = Quaternion.LookRotation(directionVector, Vector3.up).eulerAngles.y > 0;
         }
     }
 }

@@ -8,14 +8,15 @@ public class MagicState : SlimeState
     private float _activateStateDuration;
     [SerializeField]
     private float _cooldownDuration;
-    private static TimerManyTicks _cooldownTimer;
-    private static TimerManyTicks _activeStateTimer;
+    private SlimeSound _slimeSound;
+    private static Timer _cooldownTimer;
+    private static Timer _activeStateTimer;
     public override string Name
     { get => "MagicState"; }
 
     public override void ActivateAbility()
     {
-        if (_cooldownTimer != null && !_cooldownTimer.isFinish)
+        if (_cooldownTimer != null)
             return;
         if (_isAbilityActive)
         {
@@ -30,46 +31,47 @@ public class MagicState : SlimeState
 
     private void TurnOnAbility()
     {
+        Debug.Log(0);
         TimeShiftConstants.SetOtherConstant(0);
         _isAbilityActive = true;
-        _activeStateTimer = new TimerManyTicks(_activateStateDuration, () =>
+        Debug.Log(_activateStateDuration);
+        _activeStateTimer = new Timer(_activateStateDuration, () =>
         {
             _activeStateTimer = null;
             TurnOffAbility();
         });
+        _slimeSound.OnTimeSlowed();
     }
 
     private void TurnOffAbility()
     {
+        Debug.Log(1);
         TimeShiftConstants.SetOtherConstant(1);
         _activeStateTimer = null;
         _isAbilityActive = false;
-        _cooldownTimer = new TimerManyTicks(_cooldownDuration, () =>
+        _cooldownTimer = new Timer(_cooldownDuration, () =>
         {
             _cooldownTimer = null;
         });
+        _slimeSound.OnTimeNormal();
     }
     public static void Update()
     {
-        if (_cooldownTimer != null)
-        {
-            _cooldownTimer.Tick();
-            //return "T1";
-        }
-        if (_activeStateTimer != null)
-            _activeStateTimer.Tick();
-
-        //return "T";
+        _cooldownTimer?.Tick(Time.deltaTime);
+        _activeStateTimer?.Tick(Time.deltaTime);
     }
     
     public override int GetDamageModificator(object source) => 1;
 
-    public override void Init(GameObject slimeGameObject) { }
+    public override void Init(GameObject slimeGameObject)
+    {
+        _slimeSound = slimeGameObject.GetComponent<SlimeSound>();
+    }
 
     public override void Exit()
     {
         if (_isAbilityActive)
-            TimeShiftConstants.SetOtherConstant(1);
+            TurnOffAbility();
         _isAbilityActive = false;
     }
 }

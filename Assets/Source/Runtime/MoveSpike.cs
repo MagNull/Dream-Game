@@ -22,10 +22,10 @@ public class MoveSpike : MonoBehaviour
         {
             var move = 
                 transform.DOMove(zeroPos - Vector3.up * transform.localScale.y, _moveDuration);
-            move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
+            move.onUpdate += () => move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
             yield return new WaitForSeconds(_duration);
             move = transform.DOMove(zeroPos, _moveDuration);
-            move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
+            move.onUpdate += () => move.timeScale = TimeShiftConstants.Constants["OtherConstant"];
             yield return new WaitForSeconds(_duration);
         }
     }

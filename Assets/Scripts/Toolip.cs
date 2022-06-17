@@ -24,14 +24,14 @@ public class Toolip : MonoBehaviour
     {
         if (collision.TryGetComponent(out Slime slime))
             slimeTrans = slime.GetComponent<Transform>();
-            _isNear = true;
+        _isNear = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Slime slime))
             slimeTrans = slime.GetComponent<Transform>();
-            _isNear = true;
+        _isNear = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -41,19 +41,15 @@ public class Toolip : MonoBehaviour
             _isNear = false;
             _panelDialog.gameObject.SetActive(false);
         }
-
-        }
+    }
 
     private void Update()
     {
         if (_isNear)
         {
-            print("true");
             _panelDialog.gameObject.SetActive(true);
             dialog.text = Text;
-            canvas.transform.position = new Vector3 (slimeTrans.position.x, slimeTrans.position.y + 1,0.0f);
-
+            canvas.transform.position = new Vector3(slimeTrans.position.x, slimeTrans.position.y + 1, 0.0f);
         }
-
     }
 }

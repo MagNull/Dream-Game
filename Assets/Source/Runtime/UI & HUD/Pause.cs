@@ -6,7 +6,7 @@ namespace Source.Runtime.UI___HUD
     {
         private InputBindings _inputBindings;
 
-        private void Awake()
+        private void Start()
         {
             _inputBindings = FindObjectOfType<InputBindings>();
             _inputBindings.BindPause(this);
