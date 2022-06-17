@@ -28,6 +28,7 @@ namespace Source.Slime_Components
 
         private void Start()
         {
+            AudioListener.volume = PlayerPrefs.GetFloat("Volume");
             DestroyCopies();
             Compose();
         }

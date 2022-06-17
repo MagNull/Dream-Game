@@ -2,33 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ActivationScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ActivationScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Grounded.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Grounded.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakingBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakingBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lever.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lever.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wind.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wind.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/stone_button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/stone_button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.orig.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buttin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeverController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Toolip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Toolip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/BreakWallAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/BreakWallAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/MoveSpike.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/MoveSpike.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/MagicState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/MagicState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/SlimeStateBottle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SlimeStateBottle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Utils/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Utils/Timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -121,7 +94,7 @@
       <workItem from="1654328152642" duration="1400000" />
       <workItem from="1654337334445" duration="1896000" />
       <workItem from="1655126473314" duration="872000" />
-      <workItem from="1655459328344" duration="8739000" />
+      <workItem from="1655459328344" duration="9083000" />
     </task>
     <servers />
   </component>
