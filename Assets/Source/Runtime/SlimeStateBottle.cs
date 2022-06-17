@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Source.Slime_Components;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SlimeStateBottle : MonoBehaviour
 {
     enum SlimeState
@@ -15,11 +16,18 @@ public class SlimeStateBottle : MonoBehaviour
 
     [SerializeField]
     private SlimeState _slimeState;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.TryGetComponent(out ISlimeStateSwitching slimeStateMachine))
         {
+            _audioSource.Play();
             switch (_slimeState)
             {
                 case SlimeState.AIR:
@@ -32,7 +40,9 @@ public class SlimeStateBottle : MonoBehaviour
                     slimeStateMachine.AddState<MagicState>();
                     break;
             }
-            Destroy(gameObject);
+
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

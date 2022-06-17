@@ -4,13 +4,11 @@ namespace Source.Slime_Components
 {
     public class Timer
     {
-        private readonly float _duration;
         private readonly Action _action;
         private float _currentTick;
 
         public Timer(float duration, Action action)
         {
-            _duration = duration;
             _action = action;
             _currentTick = duration;
         }
@@ -19,7 +17,7 @@ namespace Source.Slime_Components
         {
             if(_currentTick <= 0)
                 return;
-            _currentTick -= _duration;
+            _currentTick -= deltaTime;
             if (_currentTick <= 0)
                 _action?.Invoke();
         }

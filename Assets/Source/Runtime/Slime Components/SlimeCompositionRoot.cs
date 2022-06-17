@@ -44,6 +44,7 @@ namespace Source.Slime_Components
             var slime = GetComponent<Slime>();
             var slimeAnimator = GetComponent<SlimeAnimator>();
             var slimeMovement = GetComponent<SlimeMovement>();
+            var slimeSound = GetComponent<SlimeSound>();
             var slimeHealth = new Health(_startHealth);
             _groundChecking = GetComponent<GroundChecking>();
 
@@ -51,6 +52,7 @@ namespace Source.Slime_Components
                 GetComponentInChildren<SpriteRenderer>());
             slimeMovement.Init(GetComponent<Rigidbody2D>(),
                 slime.GetSpeedModificator, slime.GetJumpPowerModificator, _groundChecking);
+            slimeSound.Init(slimeMovement, slime);
             slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth, _groundChecking);
 
             _inputBindings.BindMovement(slimeMovement);

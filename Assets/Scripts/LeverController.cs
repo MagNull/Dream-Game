@@ -5,7 +5,7 @@ public class LeverController : MonoBehaviour
 {
     public GameObject _gameObject;
     private Animator _animations;
-    private AudioSource _damageSound;
+    private AudioSource _audioSource;
     private bool _isTurnOn;
     private bool _isNear;
     private static readonly int _leverInteraction = Animator.StringToHash("LeverInteraction");
@@ -14,7 +14,7 @@ public class LeverController : MonoBehaviour
     {
         _animations = GetComponent<Animator>();
         _animations.SetBool(_leverInteraction, false);
-        _damageSound = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         _isTurnOn = false;
         _isNear = false;
     }
@@ -40,7 +40,7 @@ public class LeverController : MonoBehaviour
                 _animations.Play("LeverOnAnim");
             else
                 _animations.Play("LeverOffAnim");
-            _damageSound.Play();
+            _audioSource.Play();
             _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
         }
     }

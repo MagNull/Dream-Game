@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using Source.Slime_Components;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BreakWallAction : MonoBehaviour
 {
     Rigidbody2D rb;
     public Slime slime_object;
     private bool _isTurnOn;
     private bool _isNear;
+    private AudioSource _audioSource;
 
     void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         _isTurnOn = false;
         _isNear = false;
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +49,7 @@ public class BreakWallAction : MonoBehaviour
                     var childRigidbody2D = child.gameObject.GetComponent<Rigidbody2D>();
                     childRigidbody2D.gravityScale = 10;
                 }
+                _audioSource.Play();
             }
         }
     }

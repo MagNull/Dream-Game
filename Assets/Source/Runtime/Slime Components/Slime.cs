@@ -9,6 +9,8 @@ namespace Source.Slime_Components
 {
     public class Slime : MonoBehaviour, ISlimeStateSwitching, ISlimeAbilityCaster, IDamageable
     {
+        public event Action StateChanged;
+        public event Action StoneHit;
         private List<SlimeState> _allStates;
         private List<SlimeState> _availableStates;
         private int _currentState = -1;
@@ -63,8 +65,8 @@ namespace Source.Slime_Components
             if(_currentState != -1)
                 _availableStates[_currentState]?.Exit();
             _currentState++;
-            Debug.Log(_currentState);
             _currentState %= _availableStates.Count;
+            StateChanged?.Invoke();
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -77,6 +79,7 @@ namespace Source.Slime_Components
                 _availableStates[_currentState].Exit();
             
             _currentState = stateIndex;
+            StateChanged?.Invoke();
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -85,6 +88,8 @@ namespace Source.Slime_Components
         public void TakeDamage(int damage, object source)
         {
             var modificator = GetDamageModificator(source);
+            if(modificator == 0)
+                StoneHit?.Invoke();
             var resultDamage = damage * modificator;
             _health.TakeDamage(resultDamage);
         }
