@@ -223,7 +223,7 @@ MonoBehaviour:
       Data: 2|Source.Slime_Components.AirState, Assembly-CSharp
     - Name: _speed
       Entry: 4
-      Data: 2
+      Data: 3
     - Name: _jumpHeight
       Entry: 4
       Data: 3
