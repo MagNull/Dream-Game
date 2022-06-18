@@ -2865,20 +2865,21 @@ PrefabInstance:
       objectReference: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
     - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"_slimeStates.[1]._gravitationReduceCoefficient","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0.2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
       value: '"path":"_slimeStates.[1]._stateColor","value":{"$id":0,"$type":"UnityEngine.Color,
         UnityEngine.CoreModule",0.533333361,0.9764706,1,0.8}'
       objectReference: {fileID: 0}
     - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"_startStates","length":1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4948835294451659978, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4948835294451659979, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
       propertyPath: m_RootOrder
@@ -2924,10 +2925,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5230411290089603357, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
-      propertyPath: _dieSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b6c8da510574ced4c893177f38d9a20e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc07b17f626fba4ba5eb1e0d946f9be, type: 3}
 --- !u!1 &1104530147

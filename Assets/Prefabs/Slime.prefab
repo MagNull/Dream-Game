@@ -239,22 +239,22 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1
+      Data: 0.533333361
+    - Name: 
+      Entry: 4
+      Data: 0.9764706
     - Name: 
       Entry: 4
       Data: 1
     - Name: 
       Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 4
-      Data: 0.4
+      Data: 0.8
     - Name: 
       Entry: 8
       Data: 
     - Name: _gravitationReduceCoefficient
       Entry: 4
-      Data: 0.1
+      Data: 0.2
     - Name: 
       Entry: 8
       Data: 
@@ -342,79 +342,10 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
       Data: 6|Source.Slime_Components.SimpleState, Assembly-CSharp
-    - Name: _speed
-      Entry: 4
-      Data: 0
-    - Name: _jumpHeight
-      Entry: 4
-      Data: 0
-    - Name: _weight
-      Entry: 4
-      Data: 0
-    - Name: _stateColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Source.Slime_Components.AirState, Assembly-CSharp
-    - Name: _speed
-      Entry: 4
-      Data: 0
-    - Name: _jumpHeight
-      Entry: 4
-      Data: 0
-    - Name: _weight
-      Entry: 4
-      Data: 0
-    - Name: _stateColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _gravitationReduceCoefficient
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|Source.Slime_Components.StoneState, Assembly-CSharp
     - Name: _speed
       Entry: 4
       Data: 0
@@ -528,6 +459,7 @@ MonoBehaviour:
   _timeAudioSource: {fileID: 6720847705526512274}
   _timeSlowSound: {fileID: 8300000, guid: 9d608c8c40d43df4bad71156c4813d56, type: 3}
   _timesUpSound: {fileID: 8300000, guid: 0f447728c9881c247b6b65aa555f38ee, type: 3}
+  _dieSound: {fileID: 8300000, guid: b6c8da510574ced4c893177f38d9a20e, type: 3}
 --- !u!114 &1867010446001721770
 MonoBehaviour:
   m_ObjectHideFlags: 0

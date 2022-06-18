@@ -11,7 +11,9 @@ namespace Source.Slime_Components
         private bool _isAbilityActive;
 
         public override string Name
-        { get => "AirState"; }
+        {
+            get => "AirState";
+        }
 
         public override void ActivateAbility()
         {
@@ -23,6 +25,8 @@ namespace Source.Slime_Components
             else
             {
                 _rigidbody2D.gravityScale *= _gravitationReduceCoefficient;
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,
+                    _rigidbody2D.velocity.y * _gravitationReduceCoefficient);
                 _isAbilityActive = true;
             }
         }

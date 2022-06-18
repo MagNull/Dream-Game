@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f74-0731-4f16-a9f7-94a29711b591" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Grounded.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Grounded.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slime/Slime.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AudioVolumeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/AudioVolumeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AudioVolumeController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/AudioVolumeController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Music.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Music.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Toolip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Toolip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input/InputBindings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Input/InputBindings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeCompositionRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/SlimeSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slime/slimedeath-Sheet-Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slime/slimedeath-Sheet-Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slime/slimedeath2-Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slime/slimedeath2-Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/AirState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Slime Components/Slime State/AirState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +99,7 @@
       <workItem from="1654337334445" duration="1896000" />
       <workItem from="1655126473314" duration="872000" />
       <workItem from="1655459328344" duration="10000000" />
-      <workItem from="1655546391500" duration="3852000" />
+      <workItem from="1655546391500" duration="4379000" />
     </task>
     <servers />
   </component>
