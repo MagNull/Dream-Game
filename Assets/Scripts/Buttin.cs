@@ -1,6 +1,7 @@
 ﻿using System;
 using Source.Slime_Components;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(AudioSource))]
 public class Buttin : MonoBehaviour
@@ -42,6 +43,7 @@ public class Buttin : MonoBehaviour
             _isTurnOn = !_isTurnOn;
             _audioSource.Play();
             _gameObject.gameObject.SetActive(!_gameObject.activeSelf);
+            transform.DOLocalMoveY(transform.position.y - 0.3f, 0.4f);
         }
     }
 }

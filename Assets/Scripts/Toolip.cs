@@ -4,6 +4,7 @@ using Source.Slime_Components;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Toolip : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Toolip : MonoBehaviour
     public string Text;
     public Text dialog;
     public GameObject canvas;
-    private Transform slimeTrans;
+    public Transform slimeTrans;
     private bool _isTurnOn;
     private bool _isNear;
 
@@ -23,15 +24,14 @@ public class Toolip : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Slime slime))
-            slimeTrans = slime.GetComponent<Transform>();
-        _isNear = true;
+            _isNear = true;
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Slime slime))
-            slimeTrans = slime.GetComponent<Transform>();
-        _isNear = true;
+            _isNear = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,7 +39,8 @@ public class Toolip : MonoBehaviour
         if (collision.TryGetComponent(out Slime slime))
         {
             _isNear = false;
-            _panelDialog.gameObject.SetActive(false);
+            _panelDialog.transform.DOScale(0f, 0.5f);
+            //_panelDialog.gameObject.SetActive(false);
         }
     }
 
@@ -47,9 +48,10 @@ public class Toolip : MonoBehaviour
     {
         if (_isNear)
         {
-            _panelDialog.gameObject.SetActive(true);
+            //_panelDialog.gameObject.SetActive(true);
+            _panelDialog.transform.DOScale(1f, 0.5f);
             dialog.text = Text;
-            canvas.transform.position = new Vector3(slimeTrans.position.x, slimeTrans.position.y + 1, 0.0f);
         }
+        canvas.transform.position = new Vector3(slimeTrans.position.x, slimeTrans.position.y + 1, 0.0f);
     }
 }
