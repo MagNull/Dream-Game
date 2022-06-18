@@ -44,6 +44,8 @@ namespace Source.Slime_Components
         public void AddState<T>() where T : SlimeState
         {
             var newState = _allStates.FirstOrDefault(s => s is T);
+            if (typeof(T) == typeof(MagicState))
+                _availableStates.Remove(_allStates.FirstOrDefault(x => x is SimpleState));
             if (!_availableStates.Contains(newState))
                 _availableStates.Add(newState);
             newState.Init(gameObject);
@@ -53,6 +55,8 @@ namespace Source.Slime_Components
         public void AddState(Type stateType) 
         {
             var newState = _allStates.FirstOrDefault(s => s.GetType() == stateType);
+            if (typeof(Type) == typeof(MagicState))
+                _availableStates.Remove(_allStates.FirstOrDefault(x => x is SimpleState));
             if (!_availableStates.Contains(newState))
                 _availableStates.Add(newState);
             newState.Init(gameObject);
