@@ -78,7 +78,18 @@ namespace Source.Slime_Components
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
-        public void ActivateSlimeAbility() => _availableStates[_currentState].ActivateAbility();
+        public void ActivateSlimeAbility()
+        {
+            /*
+            if (_availableStates[_currentState].GetType() == typeof(MagicState))
+            {
+                var magicCanvas = gameObject.transform.Find("MagicCanvas").gameObject;
+                magicCanvas.SetActive(!magicCanvas.activeSelf);
+            }
+            */
+            _availableStates[_currentState].ActivateAbility();
+
+        }
 
         public void TakeDamage(int damage, object source)
         {
