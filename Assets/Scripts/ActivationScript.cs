@@ -31,10 +31,10 @@ public class ActivationScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Slime slime))
+        if (collision.TryGetComponent(out Slime slime) && (_isSomethingInside))
         {
             Vector3 targetPosition;
-            targetPosition = (slime.GetCurrentSlimeState().Name == "StoneState") ? _endPosition : _upPosition;
+            targetPosition = _endPosition;
             MovePlate(targetPosition);
             UpdateActivationStatus();
         }

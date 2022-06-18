@@ -1,3 +1,4 @@
+using System;
 using Source.Slime_Components;
 using UnityEngine;
 
@@ -8,20 +9,19 @@ public class MagicState : SlimeState
     private float _activateStateDuration;
     [SerializeField]
     private float _cooldownDuration;
-    private SlimeSound _slimeSound;
-    private static Timer _cooldownTimer;
-    private static Timer _activeStateTimer;
+    private static TimerManyTicks _cooldownTimer;
+    private static TimerManyTicks _activeStateTimer;
+    private static GameObject _slimeGameObject;
     public override string Name
     { get => "MagicState"; }
 
     public override void ActivateAbility()
     {
-        if (_cooldownTimer != null)
+        if (_cooldownTimer != null && !_cooldownTimer.isFinish)
             return;
         if (_isAbilityActive)
         {
             TurnOffAbility();
-
         }
         else if (!_isAbilityActive)
         {
@@ -31,47 +31,65 @@ public class MagicState : SlimeState
 
     private void TurnOnAbility()
     {
-        Debug.Log(0);
+        SwitchMask();
         TimeShiftConstants.SetOtherConstant(0);
         _isAbilityActive = true;
-        Debug.Log(_activateStateDuration);
-        _activeStateTimer = new Timer(_activateStateDuration, () =>
+        _activeStateTimer = new TimerManyTicks(_activateStateDuration, () =>
         {
             _activeStateTimer = null;
             TurnOffAbility();
         });
-        _slimeSound.OnTimeSlowed();
+    }
+
+    private void SwitchMask()
+    {
+        if (_slimeGameObject != null)
+        {
+            var magicCanvas = _slimeGameObject.transform.Find("MagicCanvas").gameObject;
+            magicCanvas.SetActive(!magicCanvas.activeSelf);
+        }
     }
 
     private void TurnOffAbility()
     {
-        Debug.Log(1);
+        SwitchMask();
         TimeShiftConstants.SetOtherConstant(1);
         _activeStateTimer = null;
         _isAbilityActive = false;
-        _cooldownTimer = new Timer(_cooldownDuration, () =>
+        var a = GameObject.Find("MagicCanvasScript");
+        var b = GameObject.Find("Canvas");
+        _cooldownTimer = new TimerManyTicks(_cooldownDuration, () =>
         {
             _cooldownTimer = null;
         });
-        _slimeSound.OnTimeNormal();
     }
     public static void Update()
     {
-        _cooldownTimer?.Tick(Time.deltaTime);
-        _activeStateTimer?.Tick(Time.deltaTime);
+        if (_cooldownTimer != null)
+        {
+            _cooldownTimer.Tick();
+            //return "T1";
+        }
+        if (_activeStateTimer != null)
+            _activeStateTimer.Tick();
+
+        //return "T";
     }
     
     public override int GetDamageModificator(object source) => 1;
 
     public override void Init(GameObject slimeGameObject)
     {
-        _slimeSound = slimeGameObject.GetComponent<SlimeSound>();
+        _slimeGameObject = slimeGameObject;
     }
 
     public override void Exit()
     {
         if (_isAbilityActive)
-            TurnOffAbility();
+        {
+            SwitchMask();
+            TimeShiftConstants.SetOtherConstant(1);
+        }
         _isAbilityActive = false;
     }
 }
