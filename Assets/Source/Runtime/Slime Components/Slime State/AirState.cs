@@ -7,6 +7,8 @@ namespace Source.Slime_Components
     {
         [SerializeField]
         private float _gravitationReduceCoefficient;
+        [SerializeField]
+        private GameObject _feather;
         private Rigidbody2D _rigidbody2D;
         private bool _isAbilityActive;
 
@@ -19,11 +21,13 @@ namespace Source.Slime_Components
         {
             if (_isAbilityActive)
             {
+                _feather.SetActive(false);
                 _rigidbody2D.gravityScale /= _gravitationReduceCoefficient;
                 _isAbilityActive = false;
             }
             else
             {
+                _feather.SetActive(true);
                 _rigidbody2D.gravityScale *= _gravitationReduceCoefficient;
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,
                     _rigidbody2D.velocity.y * _gravitationReduceCoefficient);
