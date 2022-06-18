@@ -2193,7 +2193,7 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 4
-      Data: -7.43
+      Data: -0.17
     - Name: 
       Entry: 8
       Data: 
@@ -2227,7 +2227,7 @@ BuoyancyEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_SurfaceLevel: 1
+  m_SurfaceLevel: -0.17
   m_Density: 6.8
   m_LinearDrag: 5
   m_AngularDrag: 5
