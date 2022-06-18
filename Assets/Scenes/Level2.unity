@@ -2538,7 +2538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2553458, y: 14.531145, z: -10}
+  m_LocalPosition: {x: -3.614034, y: 14.53323, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3245,7 +3245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9039672608974593067, guid: 5a72395bd2bd51947a9c8933157e8bde, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 16.359907
+      value: 16.38
       objectReference: {fileID: 0}
     - target: {fileID: 9039672608974593067, guid: 5a72395bd2bd51947a9c8933157e8bde, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4479,7 +4479,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3060395, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6348,6 +6348,10 @@ PrefabInstance:
     - target: {fileID: 1266631794169426912, guid: 7ea5371310cbd0542a76ca89d874e413, type: 3}
       propertyPath: m_Name
       value: door (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843337663094343761, guid: 7ea5371310cbd0542a76ca89d874e413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.41
       objectReference: {fileID: 0}
     - target: {fileID: 4297372657064859927, guid: 7ea5371310cbd0542a76ca89d874e413, type: 3}
       propertyPath: m_RootOrder
