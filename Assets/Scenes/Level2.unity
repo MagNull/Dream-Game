@@ -5983,7 +5983,7 @@ PrefabInstance:
     - target: {fileID: 1455681231234804760, guid: 975480f85dce3374b953bc23c7d92fa6, type: 3}
       propertyPath: _dieSound
       value: 
-      objectReference: {fileID: 8300000, guid: b6c8da510574ced4c893177f38d9a20e, type: 3}
+      objectReference: {fileID: 8300000, guid: 2618e7adfe2593a49acc18f3893c6183, type: 3}
     - target: {fileID: 1731759949911628230, guid: 975480f85dce3374b953bc23c7d92fa6, type: 3}
       propertyPath: m_Name
       value: Slime

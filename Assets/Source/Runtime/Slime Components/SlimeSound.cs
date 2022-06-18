@@ -39,7 +39,12 @@ public class SlimeSound : MonoBehaviour
         _timeAudioSource.enabled = true;
     }
 
-    public void OnGrounded() => PlaySound(_groundedSound);
+    public void OnGrounded()
+    {
+        if(_audioSource.isPlaying)
+            return;
+        PlaySound(_groundedSound);
+    }
 
     public void OnDied() => PlaySound(_dieSound);
 
