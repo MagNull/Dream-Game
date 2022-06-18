@@ -53,12 +53,13 @@ namespace Source.Slime_Components
                 GetComponentInChildren<SpriteRenderer>());
             slimeMovement.Init(GetComponent<Rigidbody2D>(),
                 slime.GetSpeedModificator, slime.GetJumpPowerModificator, _groundChecking);
-            slimeSound.Init(slimeMovement, slime);
+            slimeSound.Init(slimeMovement, slime, slimeHealth);
             slimeAnimator.Init(GetComponent<Animator>(), slimeMovement, slimeHealth, _groundChecking);
 
             _inputBindings.BindMovement(slimeMovement);
             _inputBindings.BindStateShifting(slime);
             _inputBindings.BindAbilityCast(slime);
+            slimeHealth.Died += () => _inputBindings.enabled = false;
         }
     }
 }

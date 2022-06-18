@@ -9,7 +9,7 @@ namespace Source.Slime_Components
 {
     public class Slime : MonoBehaviour, ISlimeStateSwitching, ISlimeAbilityCaster, IDamageable
     {
-        public event Action StateChanged;
+        public event Action<SlimeState> StateChanged;
         public event Action StoneHit;
         private List<SlimeState> _allStates;
         private List<SlimeState> _availableStates;
@@ -17,7 +17,8 @@ namespace Source.Slime_Components
         private Health _health;
         private SpriteRenderer _spriteRenderer;
 
-        public void Init(List<SlimeState> allStates, List<SlimeState> startStates, Health health, SpriteRenderer spriteRenderer)
+        public void Init(List<SlimeState> allStates, List<SlimeState> startStates, Health health, 
+            SpriteRenderer spriteRenderer)
         {
             _allStates = allStates;
             _availableStates = new List<SlimeState>();
@@ -27,7 +28,6 @@ namespace Source.Slime_Components
             }
             _spriteRenderer = spriteRenderer;
             _health = health;
-            _health.Died += OnDied;
             SwitchState();
             enabled = true;
         }
@@ -66,7 +66,7 @@ namespace Source.Slime_Components
                 _availableStates[_currentState]?.Exit();
             _currentState++;
             _currentState %= _availableStates.Count;
-            StateChanged?.Invoke();
+            StateChanged?.Invoke(_availableStates[_currentState]);
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -79,7 +79,7 @@ namespace Source.Slime_Components
                 _availableStates[_currentState].Exit();
             
             _currentState = stateIndex;
-            StateChanged?.Invoke();
+            StateChanged?.Invoke(_availableStates[_currentState]);
             _availableStates[_currentState].Enter(_spriteRenderer);
         }
 
@@ -103,16 +103,6 @@ namespace Source.Slime_Components
         public void OnDied()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        private void OnEnable()
-        {
-            _health.Died += OnDied;
-        }
-
-        private void OnDisable()
-        {
-            _health.Died -= OnDied;
         }
     }
 }

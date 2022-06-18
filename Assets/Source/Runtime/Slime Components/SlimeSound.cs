@@ -21,26 +21,27 @@ public class SlimeSound : MonoBehaviour
     private AudioClip _timeSlowSound;
     [SerializeField]
     private AudioClip _timesUpSound;
+    [SerializeField]
+    private AudioClip _dieSound;
     
     private SlimeMovement _slimeMovement;
     private AudioSource _audioSource;
     private Slime _slime;
-    
-    public void Init(SlimeMovement movement, Slime slime)
+    private Health _health;
+
+    public void Init(SlimeMovement movement, Slime slime, Health health)
     {
         _slime = slime;
         _audioSource = GetComponent<AudioSource>();
         _slimeMovement = movement;
+        _health = health;
         enabled = true;
         _timeAudioSource.enabled = true;
     }
 
-    public void OnGrounded()
-    {
-        if(_audioSource.isPlaying)
-            return;
-        PlaySound(_groundedSound);
-    }
+    public void OnGrounded() => PlaySound(_groundedSound);
+
+    public void OnDied() => PlaySound(_dieSound);
 
     public void OnTimeSlowed()
     {
@@ -54,18 +55,19 @@ public class SlimeSound : MonoBehaviour
         _timeAudioSource.Play();
     }
 
+    private void OnJumped() => PlaySound(_jumpSound);
+
+    private void OnStoneHit() => PlaySound(_stoneHitSound);
+
+    private void OnSlimeStateChanged(SlimeState slimeState) => PlaySound(_stateChangedSound);
+
     private void OnEnable()
     {
         _slimeMovement.Jumped += OnJumped;
         _slime.StateChanged += OnSlimeStateChanged;
         _slime.StoneHit += OnStoneHit;
+        _health.Died += OnDied;
     }
-
-    private void OnJumped() => PlaySound(_jumpSound);
-
-    private void OnStoneHit() => PlaySound(_stoneHitSound);
-
-    private void OnSlimeStateChanged() => PlaySound(_stateChangedSound);
 
     private void PlaySound(AudioClip audioClip)
     {
@@ -78,5 +80,6 @@ public class SlimeSound : MonoBehaviour
         _slimeMovement.Jumped -= OnJumped;
         _slime.StateChanged -= OnSlimeStateChanged;
         _slime.StoneHit -= OnStoneHit;
+        _health.Died -= OnDied;
     }
 }

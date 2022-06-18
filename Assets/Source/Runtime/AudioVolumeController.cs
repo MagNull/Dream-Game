@@ -17,6 +17,7 @@ public class AudioVolumeController : MonoBehaviour
     private void Start()
     {
         _slider.value = PlayerPrefs.GetFloat("Volume");
+        OnValueChanged(_slider.value);
         _slider.onValueChanged.AddListener(OnValueChanged);
     }
 

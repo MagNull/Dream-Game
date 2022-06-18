@@ -39,6 +39,7 @@ public class Toolip : MonoBehaviour
         if (collision.TryGetComponent(out Slime slime))
         {
             _isNear = false;
+            
             _panelDialog.transform.DOScale(0f, 0.5f);
             //_panelDialog.gameObject.SetActive(false);
         }

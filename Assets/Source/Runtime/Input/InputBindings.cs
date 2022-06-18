@@ -50,5 +50,6 @@ public class InputBindings : MonoBehaviour
     private void OnDisable()
     {
         _playerInput.Disable();
+        _movement.Move(Vector2.zero);
     }
 }
