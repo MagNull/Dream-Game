@@ -49,6 +49,7 @@ namespace Source.Slime_Components
         {
             if (_isAbilityActive)
             {
+                _feather.SetActive(true);
                 _rigidbody2D.gravityScale /= _gravitationReduceCoefficient;
                 _isAbilityActive = false;
             }
