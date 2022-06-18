@@ -12,8 +12,7 @@ public class ActivateScoreCanvas : MonoBehaviour
     [SerializeField] private string _currentLevel;
 
     private int _curScore;
-
-
+    
     void Start()
     {
         _curScore = 0;
@@ -32,6 +31,7 @@ public class ActivateScoreCanvas : MonoBehaviour
         if (collision.TryGetComponent(out Slime _))
         {
             _scoreCanvas.SetActive(true);
+            FindObjectOfType<InputBindings>().enabled = false;
         }
         PlayerPrefs.SetInt(_currentLevel, _curScore);
     }

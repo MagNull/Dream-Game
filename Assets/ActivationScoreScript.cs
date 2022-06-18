@@ -11,7 +11,6 @@ public class ActivationScoreScript : MonoBehaviour
     private Image[] _scoreIconsChilds;
     void Awake()
     {
-        print("@@@@");
         transform.parent.gameObject.SetActive(true);
         _scoreIconsChilds = transform.GetComponentsInChildren<Image>();
         foreach (var child in _scoreIconsChilds)

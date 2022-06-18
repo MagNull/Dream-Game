@@ -123,13 +123,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RestartLevel, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Source.Runtime.UI___HUD.LevelLoading, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -610,6 +610,8 @@ GameObject:
   - component: {fileID: 7873247801822447728}
   - component: {fileID: 7873247801822447731}
   - component: {fileID: 7873247801822447730}
+  - component: {fileID: 209390713}
+  - component: {fileID: 209390714}
   m_Layer: 0
   m_Name: ExiterToNextLevel
   m_TagString: Untagged
@@ -646,7 +648,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9014325, y: 0}
+  m_Offset: {x: 2.0634308, y: 0.56259096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -657,7 +659,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8631029, y: 1}
+  m_Size: {x: 1.1411858, y: 2.125182}
   m_EdgeRadius: 0
 --- !u!114 &7873247801822447730
 MonoBehaviour:
@@ -671,7 +673,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b417c42fa2168a409caa34a79cc2d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextLevelIndex: 2
+  _nextLevelIndex: 3
+--- !u!114 &209390713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873247801822447733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e65d88cd959ed41bf252ab75bb57da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &209390714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873247801822447733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ecbeef3d6afc240b77dafb385a8ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreCanvas: {fileID: 3413516785219913145}
+  _scorePointsHandler: {fileID: 8661080005625793923}
+  _currentLevel: Level2
 --- !u!1 &8661080005625793923
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172.7617, y: 29.1}
+  m_AnchoredPosition: {x: -172.7617, y: 120}
   m_SizeDelta: {x: 345.5234, y: 101.19321}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4466481080344546953
@@ -790,7 +819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34761968, y: 0.032}
   m_AnchorMax: {x: 0.65442955, y: 0.20860207}
-  m_AnchoredPosition: {x: -1, y: -0.9999695}
+  m_AnchoredPosition: {x: -1, y: -101}
   m_SizeDelta: {x: -178, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &226430338207827302
@@ -876,13 +905,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GoToNextLevel, Assembly-CSharp
-        m_MethodName: LoadNextLevel
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Source.Runtime.UI___HUD.LevelLoading, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -942,7 +971,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8897312124000784248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

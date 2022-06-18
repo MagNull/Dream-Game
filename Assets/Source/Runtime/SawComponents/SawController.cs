@@ -5,6 +5,8 @@ public class SawController : MonoBehaviour
 {
     [SerializeField] private float _movingSpeed = 1f;
     [SerializeField] private float _distance = 1f;
+    [SerializeField]
+    private float _spinSpeed;
     private bool _isMovingRight;
     private Vector2 _nextPoint;
     private Vector2 _leftBoundPos;
@@ -30,7 +32,7 @@ public class SawController : MonoBehaviour
         }
         _nextPoint.x *= (_isMovingRight) ? 1 : -1;
         _rigidbody.MovePosition((Vector2)transform.position + _nextPoint);
-        transform.Rotate(Vector3.forward, 5 * TimeShiftConstants.Constants["OtherConstant"]);
+        transform.Rotate(Vector3.forward, _spinSpeed * TimeShiftConstants.Constants["OtherConstant"]);
         _rigidbody.gravityScale = 0;
     }
 

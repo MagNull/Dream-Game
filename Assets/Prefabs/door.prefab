@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4297372657064859927}
-  - component: {fileID: 448622656433272270}
-  - component: {fileID: 7474336025255309600}
-  - component: {fileID: 8688203915499965832}
   - component: {fileID: 829871899}
   - component: {fileID: 9042888948879183340}
   m_Layer: 6
@@ -38,45 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &448622656433272270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266631794169426912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b417c42fa2168a409caa34a79cc2d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nextLevelIndex: 2
---- !u!114 &7474336025255309600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266631794169426912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e65d88cd959ed41bf252ab75bb57da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8688203915499965832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266631794169426912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ecbeef3d6afc240b77dafb385a8ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scoreCanvas: {fileID: 0}
-  _scorePointsHandler: {fileID: 0}
 --- !u!61 &829871899
 BoxCollider2D:
   m_ObjectHideFlags: 0

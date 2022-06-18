@@ -7,8 +7,9 @@ public class ScorePointBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Slime _))
+        if (collision.TryGetComponent(out Slime slime))
         {
+            slime.GetComponent<SlimeSound>().OnBonusCollected();
             var canvas = _scoreCanvas.GetComponent<ActivateScoreCanvas>();
             canvas.UpdateScoreOnExit();
             Destroy(transform.gameObject);

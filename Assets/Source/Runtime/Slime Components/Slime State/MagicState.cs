@@ -9,15 +9,19 @@ public class MagicState : SlimeState
     private float _activateStateDuration;
     [SerializeField]
     private float _cooldownDuration;
-    private static TimerManyTicks _cooldownTimer;
-    private static TimerManyTicks _activeStateTimer;
-    private static GameObject _slimeGameObject;
+    [SerializeField]
+    private GameObject _magicCanvas;
+    [SerializeField]
+    private GameObject _hourglasses;
+    private static Timer _cooldownTimer;
+    private static Timer _activeStateTimer;
+    private static SlimeSound _slimeSound;
     public override string Name
     { get => "MagicState"; }
 
     public override void ActivateAbility()
     {
-        if (_cooldownTimer != null && !_cooldownTimer.isFinish)
+        if (_cooldownTimer != null)
             return;
         if (_isAbilityActive)
         {
@@ -31,34 +35,27 @@ public class MagicState : SlimeState
 
     private void TurnOnAbility()
     {
-        SwitchMask();
+        _hourglasses.SetActive(true);
+        _magicCanvas.SetActive(true);
+        _slimeSound.OnTimeSlowed();
         TimeShiftConstants.SetOtherConstant(0);
         _isAbilityActive = true;
-        _activeStateTimer = new TimerManyTicks(_activateStateDuration, () =>
+        _activeStateTimer = new Timer(_activateStateDuration, () =>
         {
             _activeStateTimer = null;
             TurnOffAbility();
         });
     }
 
-    private void SwitchMask()
-    {
-        if (_slimeGameObject != null)
-        {
-            var magicCanvas = _slimeGameObject.transform.Find("MagicCanvas").gameObject;
-            magicCanvas.SetActive(!magicCanvas.activeSelf);
-        }
-    }
-
     private void TurnOffAbility()
     {
-        SwitchMask();
+        _isAbilityActive = false;
+        _hourglasses.SetActive(false);
+        _magicCanvas.SetActive(false);
+        _slimeSound.OnTimeNormal();
         TimeShiftConstants.SetOtherConstant(1);
         _activeStateTimer = null;
-        _isAbilityActive = false;
-        var a = GameObject.Find("MagicCanvasScript");
-        var b = GameObject.Find("Canvas");
-        _cooldownTimer = new TimerManyTicks(_cooldownDuration, () =>
+        _cooldownTimer = new Timer(_cooldownDuration, () =>
         {
             _cooldownTimer = null;
         });
@@ -67,11 +64,11 @@ public class MagicState : SlimeState
     {
         if (_cooldownTimer != null)
         {
-            _cooldownTimer.Tick();
+            _cooldownTimer.Tick(Time.deltaTime);
             //return "T1";
         }
         if (_activeStateTimer != null)
-            _activeStateTimer.Tick();
+            _activeStateTimer.Tick(Time.deltaTime);
 
         //return "T";
     }
@@ -80,16 +77,14 @@ public class MagicState : SlimeState
 
     public override void Init(GameObject slimeGameObject)
     {
-        _slimeGameObject = slimeGameObject;
+        _slimeSound = slimeGameObject.GetComponent<SlimeSound>();
+        _cooldownTimer = null;
     }
 
     public override void Exit()
     {
-        if (_isAbilityActive)
-        {
-            SwitchMask();
-            TimeShiftConstants.SetOtherConstant(1);
-        }
+        if (_isAbilityActive) 
+            TurnOffAbility();
         _isAbilityActive = false;
     }
 }
