@@ -1,3 +1,4 @@
+using System;
 using Source.Slime_Components;
 using UnityEngine;
 
@@ -8,9 +9,13 @@ public class MagicState : SlimeState
     private float _activateStateDuration;
     [SerializeField]
     private float _cooldownDuration;
-    private SlimeSound _slimeSound;
+    [SerializeField]
+    private GameObject _magicCanvas;
+    [SerializeField]
+    private GameObject _hourglasses;
     private static Timer _cooldownTimer;
     private static Timer _activeStateTimer;
+    private static SlimeSound _slimeSound;
     public override string Name
     { get => "MagicState"; }
 
@@ -21,7 +26,6 @@ public class MagicState : SlimeState
         if (_isAbilityActive)
         {
             TurnOffAbility();
-
         }
         else if (!_isAbilityActive)
         {
@@ -31,34 +35,42 @@ public class MagicState : SlimeState
 
     private void TurnOnAbility()
     {
-        Debug.Log(0);
+        _hourglasses.SetActive(true);
+        _magicCanvas.SetActive(true);
+        _slimeSound.OnTimeSlowed();
         TimeShiftConstants.SetOtherConstant(0);
         _isAbilityActive = true;
-        Debug.Log(_activateStateDuration);
         _activeStateTimer = new Timer(_activateStateDuration, () =>
         {
             _activeStateTimer = null;
             TurnOffAbility();
         });
-        _slimeSound.OnTimeSlowed();
     }
 
     private void TurnOffAbility()
     {
-        Debug.Log(1);
+        _isAbilityActive = false;
+        _hourglasses.SetActive(false);
+        _magicCanvas.SetActive(false);
+        _slimeSound.OnTimeNormal();
         TimeShiftConstants.SetOtherConstant(1);
         _activeStateTimer = null;
-        _isAbilityActive = false;
         _cooldownTimer = new Timer(_cooldownDuration, () =>
         {
             _cooldownTimer = null;
         });
-        _slimeSound.OnTimeNormal();
     }
     public static void Update()
     {
-        _cooldownTimer?.Tick(Time.deltaTime);
-        _activeStateTimer?.Tick(Time.deltaTime);
+        if (_cooldownTimer != null)
+        {
+            _cooldownTimer.Tick(Time.deltaTime);
+            //return "T1";
+        }
+        if (_activeStateTimer != null)
+            _activeStateTimer.Tick(Time.deltaTime);
+
+        //return "T";
     }
     
     public override int GetDamageModificator(object source) => 1;
@@ -66,11 +78,12 @@ public class MagicState : SlimeState
     public override void Init(GameObject slimeGameObject)
     {
         _slimeSound = slimeGameObject.GetComponent<SlimeSound>();
+        _cooldownTimer = null;
     }
 
     public override void Exit()
     {
-        if (_isAbilityActive)
+        if (_isAbilityActive) 
             TurnOffAbility();
         _isAbilityActive = false;
     }

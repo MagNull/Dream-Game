@@ -23,6 +23,8 @@ public class SlimeSound : MonoBehaviour
     private AudioClip _timesUpSound;
     [SerializeField]
     private AudioClip _dieSound;
+    [SerializeField]
+    private AudioClip _bonusSound;
     
     private SlimeMovement _slimeMovement;
     private AudioSource _audioSource;
@@ -59,6 +61,8 @@ public class SlimeSound : MonoBehaviour
         _timeAudioSource.clip = _timesUpSound;
         _timeAudioSource.Play();
     }
+
+    public void OnBonusCollected() => PlaySound(_bonusSound);
 
     private void OnJumped() => PlaySound(_jumpSound);
 
